@@ -1,0 +1,26 @@
+// Javascript (.jsx)
+
+////////////////////////////////// 		SANG + BẢO
+Nhận Dạng Giọng Nói:
+(Clicked-> Stop button required) == Front end
+1.Function Record->File (input ??)
+2.Function Speech To Text (API..) (string path mp4)
+{
+	Yêu cầu front-end 
+	=> return string;
+}
+/////////////////////////////////// 	LONG			/////
+Tương Tác Văn Bản Đến Văn Bản: 
+1. Fuction SendToApi (string prompt)
+{
+	string message_send = "" + "Đưa ra các câu hỏi gợi ý tiếp theo"
+	return string (answer)
+}
+
+//////////////////////////////////		SANG + BẢO
+2. Sau khi nhấn send, disable Send button
+
+3. Function Text To Speech(string )
+{
+	return audio;
+}

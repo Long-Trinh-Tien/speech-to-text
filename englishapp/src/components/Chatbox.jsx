@@ -2,26 +2,30 @@ import React, { useState , useEffect, useRef } from 'react';
 import 'react-chat-elements/dist/main.css';
 import { MessageBox, Input, Button } from 'react-chat-elements';
 import './css/Chatbox.css'
+import { speechToText } from '../function/speech-to-text';
+
+function renderMessages(messages)
+{
+  return(
+    messages.map(
+      function(msg,index,arr)
+      {
+        return(
+        <MessageBox key={index} {...msg}/>);
+      }
+    )
+  )
+}
+
 
 
 export default function ChatBox()
 {
-  const [messages,setMessage] = useState([]);
-  const [inputValue, setInputValue] = useState("");
-  const messageListRef = useRef(null);
+  const [messages,setMessage] = useState([]); // Quản lý state của các message
+  const [inputValue, setInputValue] = useState(""); // Quản lý state của phần input
+  const messageListRef = useRef(null); //Quản lý state của danh sách tin nhắn
+  const [isVoiceButtonDisable, setVoiceButtonStatus] = useState(false); // Quản lý state của Voice Button
 
-  function renderMessages()
-  {
-    return(
-      messages.map(
-        function(msg,index,arr)
-        {
-          return(
-          <MessageBox key={index} {...msg}/>);
-        }
-      )
-    )
-  }
   function setInput(event)
   {
     setInputValue(event.target.value);
@@ -43,6 +47,7 @@ export default function ChatBox()
 
   }
 
+  // Hàm check index của tin nhắn cuối cùng và scroll down
   function scrollToBottom()
   {
     if(messageListRef.current)
@@ -51,6 +56,19 @@ export default function ChatBox()
     }
   }
 
+  function speechToTextButton(){
+
+    //setVoiceButtonStatus(true); // Vô hiệu hóa nút trước khi bắt đầu nhận dạng giọng nói
+    speechToText(
+      (tempResult1) => {
+        setInputValue(tempResult1);
+      },
+      (finalResult1) => {
+        setInputValue(finalResult1);
+      }
+    )
+  }
+  // Hàm check giá trị của mảng message và trigger của hàm scrollToBottom
   useEffect(function ()
   {
     scrollToBottom();
@@ -59,8 +77,9 @@ export default function ChatBox()
   return(
     <div className="chat-container">
       <div className='message-list' ref={messageListRef}>
-        {renderMessages()}
+        {renderMessages(messages)}
       </div>
+
       <div className='input-container'>
         <Input 
           placeholder='Ask anything...' 
@@ -74,6 +93,8 @@ export default function ChatBox()
             />,
             <Button 
               text="Voice"
+              onClick={speechToTextButton}
+              disabled={isVoiceButtonDisable}
             />]
           }
         />
