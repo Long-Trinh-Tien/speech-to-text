@@ -1,5 +1,15 @@
-.Header {
-    min-height: 20%;
+.Main-container {
+    display: flex;
+    flex-direction: column;
+    max-height: 100vh;   /* Đảm bảo chiều cao của container là 100vh */
+    height: 100vh;       /* Cố định chiều cao */
+    overflow:auto ;    /* Ngăn chặn sự giãn nở */
 }
-.ChatBox {
+
+.Chatbox {
+    flex: 0 0 80%;       /* Chatbox chiếm 80% chiều cao, không giãn nở và không thu nhỏ */
+}
+
+.Header {
+    flex: 0 0 20%;       /* Header chiếm 20% chiều cao, không giãn nở và không thu nhỏ */
 }
