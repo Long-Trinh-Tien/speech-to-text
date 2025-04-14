@@ -2,6 +2,7 @@
   "dependencies": {
     "@ebereplenty/chatbot": "^1.0.1",
     "react-chat-elements": "^12.0.18",
+    "react-icons": "^5.5.0",
     "react-speech-recognition": "^4.0.0"
   }
 }
