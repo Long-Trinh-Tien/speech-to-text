@@ -5,6 +5,7 @@ import "./css/Chatbox.css";
 import { speechToText } from "../function/speech-to-text";
 import { FaMicrophone, FaStop } from "react-icons/fa"; // thư viện icon micro
 import TextToSpeech from "../function/text-to-speech";
+import { sendMessageToBackend } from "../function/sendMessageToBackend";
 
 class Message {
   date;
@@ -104,7 +105,7 @@ export default function ChatBox() {
     setInputValue(event.target.value);
   }
 
-  function handleSendButton() {
+async function handleSendButton() {
     if (inputValue.trim() != "") {
       const newMessage = new Message();
       newMessage.date = new Date();
@@ -116,6 +117,20 @@ export default function ChatBox() {
       setMessage([...messages, newMessage]);
       //setMessage(prevMessages => [...prevMessages, newMessage]);
       setInputValue("");
+
+    // Call backend & add bot response
+    const res = await sendMessageToBackend(inputValue);
+    const botText = res?.candidates?.[0]?.content?.parts?.[0]?.text || "No respond ? Enable backend server first";
+
+    const botMessage = {
+      date: new Date(),
+      type: "text",
+      position: "left",
+      text: botText,
+      user: "bot"
+    };
+
+    setMessage(prev => [...prev, botMessage]);
     }
   }
 
@@ -146,6 +161,9 @@ export default function ChatBox() {
           type="text"
           value={inputValue}
           onChange={setInput}
+          onKeyDown={(e) => {
+            if (e.key === "Enter") handleSendButton();
+          }}
           rightButtons={[
             !isVoiceRecording && (
               <Button text="Send" onClick={handleSendButton} />
