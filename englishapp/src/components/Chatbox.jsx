@@ -105,7 +105,7 @@ export default function ChatBox() {
     setInputValue(event.target.value);
   }
 
-async function handleSendButton() {
+  async function handleSendButton() {
     if (inputValue.trim() != "") {
       const newMessage = new Message();
       newMessage.date = new Date();
@@ -118,19 +118,21 @@ async function handleSendButton() {
       //setMessage(prevMessages => [...prevMessages, newMessage]);
       setInputValue("");
 
-    // Call backend & add bot response
-    const res = await sendMessageToBackend(inputValue);
-    const botText = res?.candidates?.[0]?.content?.parts?.[0]?.text || "No respond ? Enable backend server first";
+      // Call backend & add bot response
+      const res = await sendMessageToBackend(inputValue);
+      const botText =
+        res?.candidates?.[0]?.content?.parts?.[0]?.text ||
+        "No respond ? Enable backend server first";
 
-    const botMessage = {
-      date: new Date(),
-      type: "text",
-      position: "left",
-      text: botText,
-      user: "bot"
-    };
+      const botMessage = {
+        date: new Date(),
+        type: "text",
+        position: "left",
+        text: botText,
+        user: "bot",
+      };
 
-    setMessage(prev => [...prev, botMessage]);
+      setMessage((prev) => [...prev, botMessage]);
     }
   }
 

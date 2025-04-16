@@ -16,6 +16,7 @@ export function speechToText(tempResult, finalResult, recognition) {
       if (result.isFinal) {
         finalTranscript += result[0].transcript;
         finalResult(finalTranscript);
+        finalTranscript = "";
       } else {
         tempTranscript = finalTranscript + result[0].transcript;
         tempResult(tempTranscript);
