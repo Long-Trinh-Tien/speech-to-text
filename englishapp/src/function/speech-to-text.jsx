@@ -27,4 +27,7 @@ export function speechToText(tempResult, finalResult, recognition) {
   recognition.onerror = (event) => {
     console.log("Lỗi trong quá trình nhận dạng giọng nói: " + event.error);
   };
+  recognition.onstop = (event) => {
+    finalTranscript = "";
+  };
 }

@@ -6,14 +6,7 @@ import { speechToText } from "../function/speech-to-text";
 import { FaMicrophone, FaStop } from "react-icons/fa"; // thư viện icon micro
 import TextToSpeech from "../function/text-to-speech";
 import { sendMessageToBackend } from "../function/sendMessageToBackend";
-
-class Message {
-  date;
-  type;
-  position;
-  text;
-  user;
-}
+import Message from "../class/message.js";
 
 function renderMessages(messages) {
   return messages.map((msg, index) => {
@@ -100,37 +93,40 @@ export default function ChatBox() {
   const messageListRef = useRef(null); //Quản lý tham chiếu đến danh sách tin nhắn mà không render lại
   const recognitionRef = useRef(null); //Quản lý ref đến Rec mà không render lại
   const [isVoiceRecording, setVoiceButtonStatus] = useState(false); // Quản lý state của Voice Button
-
+  const [waitForAnswer, setWaitForAnswer] = useState(false); // Quản lý state chờ trả lời của AI
   function setInput(event) {
     setInputValue(event.target.value);
   }
 
-async function handleSendButton() {
+  async function handleSendButton() {
     if (inputValue.trim() != "") {
-      const newMessage = new Message();
-      newMessage.date = new Date();
-      newMessage.type = "text";
-      newMessage.position = "right";
-      newMessage.text = inputValue;
-      newMessage.user = "user";
+      const newUserMessage = new Message();
+      newUserMessage.date = new Date();
+      newUserMessage.type = "text";
+      newUserMessage.position = "right";
+      newUserMessage.text = inputValue;
+      newUserMessage.user = "user";
+      newUserMessage.title = "User";
+      setMessage((messages) => [...messages, newUserMessage]);
+      setInputValue(""); // Đặt lại giá trị của input về rỗng
+      setWaitForAnswer(true);
+      // Call backend & add bot response
+      const res = await sendMessageToBackend(inputValue);
+      const botText =
+        res?.candidates?.[0]?.content?.parts?.[0]?.text ||
+        "No respond ? Enable backend server first";
 
-      setMessage([...messages, newMessage]);
-      //setMessage(prevMessages => [...prevMessages, newMessage]);
-      setInputValue("");
+      const newBotMessage = new Message();
+      newBotMessage.date = new Date();
+      newBotMessage.type = "text";
+      newBotMessage.position = "left";
+      newBotMessage.text = botText;
+      newBotMessage.user = "bot";
+      newBotMessage.title = "AI agent";
 
-    // Call backend & add bot response
-    const res = await sendMessageToBackend(inputValue);
-    const botText = res?.candidates?.[0]?.content?.parts?.[0]?.text || "No respond ? Enable backend server first";
-
-    const botMessage = {
-      date: new Date(),
-      type: "text",
-      position: "left",
-      text: botText,
-      user: "bot"
-    };
-
-    setMessage(prev => [...prev, botMessage]);
+      setMessage((messages) => [...messages, newBotMessage]);
+      setWaitForAnswer(false);
+      //setInputValue(""); // Đặt lại giá trị của input về rỗng
     }
   }
 
@@ -156,34 +152,37 @@ async function handleSendButton() {
       </div>
 
       <div className="input-container">
-        <Input
+        <textarea
           placeholder="Ask anything..."
           type="text"
           value={inputValue}
           onChange={setInput}
           onKeyDown={(e) => {
-            if (e.key === "Enter") handleSendButton();
+            if (e.key === "Enter") {
+              e.preventDefault();
+              handleSendButton();
+            }
           }}
-          rightButtons={[
-            !isVoiceRecording && (
-              <Button text="Send" onClick={handleSendButton} />
-            ),
-            <Button
-              text={isVoiceRecording ? <FaStop /> : <FaMicrophone />}
-              onClick={() => {
-                speechToTextButton(
-                  recognitionRef,
-                  setVoiceButtonStatus,
-                  isVoiceRecording,
-                  setInputValue
-                );
-              }}
-              className={
-                isVoiceRecording ? "btn-voice-disable" : "btn-voice-enable"
-              }
-            />,
-          ]}
         />
+        <div className="button-container">
+          {!isVoiceRecording && !waitForAnswer && (
+            <Button text="Send" onClick={handleSendButton} />
+          )}
+          <Button
+            text={isVoiceRecording ? <FaStop /> : <FaMicrophone />}
+            onClick={() => {
+              speechToTextButton(
+                recognitionRef,
+                setVoiceButtonStatus,
+                isVoiceRecording,
+                setInputValue
+              );
+            }}
+            className={
+              isVoiceRecording ? "btn-voice-disable" : "btn-voice-enable"
+            }
+          />
+        </div>
       </div>
     </div>
   );
