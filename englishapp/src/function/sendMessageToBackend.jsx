@@ -30,3 +30,19 @@ export async function sendLoginMessageToBackend(username, password) {
     return false;
   }
 }
+export async function sendRegisterMessageToBackend(username, password) {
+  try {
+    const res = await fetch("http://localhost:3000/register", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({ username, password })
+    });
+
+    return res; // trả thẳng về response để bên Register.jsx xử lý tiếp
+  } catch (err) {
+    console.error("Error in sendRegisterMessageToBackend:", err);
+    throw err; // ném lỗi ra ngoài cho Register.jsx catch
+  }
+}

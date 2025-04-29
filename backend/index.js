@@ -4,13 +4,13 @@ import { sendMessageToGemini } from "./gemini.js";
 import "dotenv/config";
 import cors from "cors";
 import { userCheck } from "./login.js";
+import { userRegister } from "./register.js";
 const app = express();
 const port = 3000;
 
 app.use(cors()); // Cho phép frontend gọi từ domain khác
 app.use(express.json());
 
-//API chat với bot
 app.post("/api/message", async (req, res) => {
   const { message } = req.body;
   try {
@@ -31,6 +31,14 @@ app.post("/login", async (req, res) => {
     res.status(500).json({ error });
   }
 });
+
+app.post("/register", (req, res) => {
+  const { username, password } = req.body;
+  userRegister(username, password)
+    .then(result => res.status(201).json(result))
+    .catch(err => res.status(err.status || 500).json({ error: err.error }));
+});
+
 
 app.listen(port, () => {
   console.log(`Server listening on http://localhost:${port}`);
