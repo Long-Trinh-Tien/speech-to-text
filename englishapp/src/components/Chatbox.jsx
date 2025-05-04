@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef, useContext } from "react";
 import "react-chat-elements/dist/main.css";
 import { MessageBox, Input, Button } from "react-chat-elements";
 import "./css/Chatbox.css";
@@ -7,6 +7,7 @@ import { FaMicrophone, FaStop } from "react-icons/fa"; // thư viện icon micro
 import TextToSpeech from "../function/text-to-speech";
 import { sendMessageToBackend } from "../function/sendMessageToBackend";
 import Message from "../class/message.js";
+import { UserContext } from "../function/UserContext"; 
 
 function renderMessages(messages) {
   return messages.map((msg, index) => {
@@ -97,6 +98,7 @@ export default function ChatBox() {
   function setInput(event) {
     setInputValue(event.target.value);
   }
+  const { username } = useContext(UserContext); // Get username from context
 
   async function handleSendButton() {
     if (inputValue.trim() != "") {
@@ -105,8 +107,8 @@ export default function ChatBox() {
       newUserMessage.type = "text";
       newUserMessage.position = "right";
       newUserMessage.text = inputValue;
-      newUserMessage.user = "user";
-      newUserMessage.title = "User";
+      newUserMessage.user = username;
+      newUserMessage.title = username;
       setMessage((messages) => [...messages, newUserMessage]);
       setInputValue(""); // Đặt lại giá trị của input về rỗng
       setWaitForAnswer(true);
@@ -127,6 +129,21 @@ export default function ChatBox() {
       setMessage((messages) => [...messages, newBotMessage]);
       setWaitForAnswer(false);
       //setInputValue(""); // Đặt lại giá trị của input về rỗng
+
+      // Lưu tin nhắn vào backend
+	  try {
+	  	const messagesToSave = [newUserMessage, newBotMessage]; // Chỉ lấy 2 tin nhắn mới nhất
+	  	await fetch("http://localhost:3000/save-message", {
+	  		method: "POST",
+	  		headers: {
+	  			"Content-Type": "application/json",
+	  		},
+	  		body: JSON.stringify({ username, messages: messagesToSave }),
+	  	});
+	  } catch (err) {
+	  	console.error("Failed to save messages:", err);
+	  }
+
     }
   }
 
@@ -144,6 +161,21 @@ export default function ChatBox() {
     },
     [messages]
   );
+
+  // Lấy history khi username thay đổi
+  useEffect(() => {
+	async function fetchHistory() {
+	  if (!username) return;
+	  try {
+		const res = await fetch(`http://localhost:3000/get-history/${username}`);
+		const data = await res.json();
+		if (data?.messages) setMessage(data.messages);
+	  } catch (err) {
+		console.error("Failed to load history:", err);
+	  }
+	}
+	fetchHistory();
+  }, [username]);
 
   return (
     <div className="chat-container">

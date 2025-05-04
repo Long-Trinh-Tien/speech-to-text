@@ -1,8 +1,12 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef, useContext } from "react";
 import { sendLoginMessageToBackend } from "../function/sendMessageToBackend";
 import "./css/Login.css";
 import { useNavigate } from "react-router-dom";
+import { UserContext } from "../function/UserContext.jsx";
 export default function LogIn(props) {
+  // Use useContext to get username from UserContext, change it to setGlobalUsername to prevent confusion
+  // between the local state and the global state
+  const { setUsername: setGlobalUsername } = useContext(UserContext);
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
@@ -18,6 +22,7 @@ export default function LogIn(props) {
       const status = await sendLoginMessageToBackend(username, password);
       if (status) {
         props.loginStatusChange(true);
+		setGlobalUsername(username); // Set the global username to the logged-in username
         navigate("/main");
       } else {
         setError("Invalid username or password.");
