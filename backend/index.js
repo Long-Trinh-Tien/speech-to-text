@@ -70,9 +70,7 @@ app.post("/save-message", (req, res) => {
 	try {
 	  fs.writeFileSync(filePath, JSON.stringify(combinedMessages, null, 2), "utf8");
 	  res.json({ success: true });
-	  console.log("Messages saved successfully:", combinedMessages);
 	} catch (err) {
-	  console.log("Error writing to file:", err);
 	  console.error("Failed to save messages:", err);
 	  res.status(500).json({ error: "Failed to save messages" });
 	}
