@@ -3,6 +3,7 @@ import { sendLoginMessageToBackend } from "../function/sendMessageToBackend";
 import "./css/Login.css";
 import { useNavigate } from "react-router-dom";
 import { UserContext } from "../function/UserContext.jsx";
+import { saveWebAPIToken } from "../services/LoginState.js";
 export default function LogIn(props) {
   // Use useContext to get username from UserContext, change it to setGlobalUsername to prevent confusion
   // between the local state and the global state
@@ -11,6 +12,7 @@ export default function LogIn(props) {
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
+  const [remeberMe, setRememberMe] = useState(false);
   const navigate = useNavigate();
 
   const handleLogin = async (e) => {
@@ -22,7 +24,8 @@ export default function LogIn(props) {
       const status = await sendLoginMessageToBackend(username, password);
       if (status) {
         props.loginStatusChange(true);
-		setGlobalUsername(username); // Set the global username to the logged-in username
+        setGlobalUsername(username); // Set the global username to the logged-in username
+        if (remeberMe) saveWebAPIToken(username);
         navigate("/main");
       } else {
         setError("Invalid username or password.");
@@ -55,6 +58,17 @@ export default function LogIn(props) {
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             required
+          />
+        </div>
+        <div className="remember">
+          <label htmlFor="rember">Remember me</label>
+          <input
+            type="checkbox"
+            id="remember"
+            checked={remeberMe}
+            onChange={(e) => {
+              setRememberMe(e.target.checked);
+            }}
           />
         </div>
         {error && <p className="error-message">{error}</p>}

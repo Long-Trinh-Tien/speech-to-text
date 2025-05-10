@@ -16,5 +16,9 @@
 }
 
 .Header {
+  display: flex;
+  justify-content: right;
+  gap: 2rem;
+  align-items: center;
   flex: 0 0 auto;
 }

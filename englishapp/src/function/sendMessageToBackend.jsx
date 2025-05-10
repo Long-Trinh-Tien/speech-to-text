@@ -35,14 +35,32 @@ export async function sendRegisterMessageToBackend(username, password) {
     const res = await fetch("http://localhost:3000/register", {
       method: "POST",
       headers: {
-        "Content-Type": "application/json"
+        "Content-Type": "application/json",
       },
-      body: JSON.stringify({ username, password })
+      body: JSON.stringify({ username, password }),
     });
 
     return res; // trả thẳng về response để bên Register.jsx xử lý tiếp
   } catch (err) {
     console.error("Error in sendRegisterMessageToBackend:", err);
     throw err; // ném lỗi ra ngoài cho Register.jsx catch
+  }
+}
+
+export async function sendUserTokenToBackend(token) {
+  try {
+    const res = await fetch("http://localhost:3000/user-token", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ token }),
+    });
+    if (res.status === 200) {
+      return true;
+    } else {
+      return false;
+    }
+  } catch (err) {
+    console.error("Error in sendLoginMessageToBackend");
+    return false;
   }
 }

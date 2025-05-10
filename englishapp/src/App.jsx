@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useContext, useEffect } from "react";
 import "/src/App.css";
 import ChatBox from "./components/Chatbox.jsx";
 import LogIn from "./components/Login.jsx";
@@ -9,9 +9,46 @@ import {
   Route,
   Navigate,
 } from "react-router-dom";
+import { UserContext } from "./function/UserContext.jsx";
+import {
+  removeWebAPIToken,
+  getCurrentlyTokenLogin,
+} from "./services/LoginState.js";
+import { sendUserTokenToBackend } from "./function/sendMessageToBackend.jsx";
+
+async function checkToken(setLoginStatus, setUsername, setIsChecking) {
+  const token = getCurrentlyTokenLogin();
+  if (!token) {
+    setLoginStatus(false);
+    setUsername(null);
+    setIsChecking(false);
+    return;
+  }
+
+  const status = await sendUserTokenToBackend(token);
+  if (status) {
+    setLoginStatus(true);
+    setUsername(token);
+    setIsChecking(false);
+  } else {
+    setLoginStatus(false);
+    setUsername(null);
+    setIsChecking(false);
+  }
+}
 
 export default function App() {
+  const { username, setUsername } = useContext(UserContext);
   const [isLogin, setLoginStatus] = useState(false);
+  const [isChecking, setIsChecking] = useState(true);
+
+  useEffect(() => {
+    checkToken(setLoginStatus, setUsername, setIsChecking);
+  }, []);
+
+  if (isChecking) {
+    return <div>Loading...</div>; // Hiển thị trạng thái "Loading" trong khi kiểm tra
+  }
   return (
     <>
       <Router>
@@ -29,9 +66,18 @@ export default function App() {
               isLogin ? (
                 <div className="Main-container">
                   <div className="Header">
-                    <p>Header</p>
+                    <p>Welcome {username}</p>
+                    <a
+                      href="/login"
+                      onClick={() => {
+                        setLoginStatus(false);
+                        setUsername(null);
+                        removeWebAPIToken();
+                      }}
+                    >
+                      Log out
+                    </a>
                   </div>
-
                   <div className="Chatbox">
                     <ChatBox />
                   </div>

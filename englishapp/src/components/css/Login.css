@@ -64,3 +64,11 @@
   color: #007bff;
   font-size: 1rem;
 }
+
+.remember {
+  display: flex;
+  font-size: 1rem;
+  color: #555;
+  justify-content: left;
+  gap: 1rem;
+}

@@ -29,3 +29,26 @@ export function userCheck(username, password) {
     });
   });
 }
+export function tokenCheck(token) {
+  return new Promise((resolve, reject) => {
+    // Lấy path file user
+    const filePath = path.join(__dirname, "data", "user.json");
+    //Đọc file
+    fs.readFile(filePath, "utf8", (err, data) => {
+      if (err) {
+        return reject({ status: "500", error: "Can not load user data" });
+      }
+      const users = JSON.parse(data).users;
+
+      const user = users.find((user) => {
+        return user.username === token;
+      });
+
+      if (user) {
+        resolve({ status: 200, message: "Login successfully", user });
+      } else {
+        reject({ status: 401, error: "Invalid username or password" });
+      }
+    });
+  });
+}

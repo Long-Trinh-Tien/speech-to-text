@@ -1,0 +1,82 @@
+[
+  {
+    "user": "test",
+    "text": "Hi, can you be my english speaking partner?",
+    "date": "2025-05-10T08:12:22.574Z",
+    "type": "text",
+    "title": "test",
+    "position": "right"
+  },
+  {
+    "user": "bot",
+    "text": "Okay, I'd love to be your English speaking partner! I'm ready to chat. \n\nTo make this more effective, tell me:\n\n*   **What kind of practice are you looking for?**  Do you want to focus on grammar, pronunciation, vocabulary, conversational fluency, or something else?\n*   **What are your interests?**  This will help us find topics we can both enjoy talking about.\n*   **Do you have any specific topics you want to discuss right now?**\n*   **How often would you like to practice?**\n\nIn the meantime, here's a question to get us started:\n\n**What is one thing you are looking forward to this week?**\n\nI'm excited to help you improve your English!\n",
+    "date": "2025-05-10T08:12:24.223Z",
+    "type": "text",
+    "title": "AI Agent",
+    "position": "left"
+  },
+  {
+    "user": "test",
+    "text": "hi",
+    "date": "2025-05-10T08:12:27.813Z",
+    "type": "text",
+    "title": "test",
+    "position": "right"
+  },
+  {
+    "user": "bot",
+    "text": "Hi there! How can I help you today?\n",
+    "date": "2025-05-10T08:12:29.636Z",
+    "type": "text",
+    "title": "AI Agent",
+    "position": "left"
+  },
+  {
+    "user": "test",
+    "text": "Say something",
+    "date": "2025-05-10T08:19:39.778Z",
+    "type": "text",
+    "title": "test",
+    "position": "right"
+  },
+  {
+    "user": "bot",
+    "text": "Okay! Here's something:\n\nThe universe is vast and full of wonder, and you're a part of it. Remember to appreciate the small things and keep exploring. \n",
+    "date": "2025-05-10T08:19:40.828Z",
+    "type": "text",
+    "title": "AI Agent",
+    "position": "left"
+  },
+  {
+    "user": "test",
+    "text": "Hello, can you hear me?",
+    "date": "2025-05-10T09:08:29.183Z",
+    "type": "text",
+    "title": "test",
+    "position": "right"
+  },
+  {
+    "user": "bot",
+    "text": "Yes, I can hear you. How can I help you today?\n",
+    "date": "2025-05-10T09:08:30.052Z",
+    "type": "text",
+    "title": "AI Agent",
+    "position": "left"
+  },
+  {
+    "user": "test",
+    "text": "hi",
+    "date": "2025-05-10T12:50:39.895Z",
+    "type": "text",
+    "title": "test",
+    "position": "right"
+  },
+  {
+    "user": "bot",
+    "text": "Hi there! How can I help you today?\n",
+    "date": "2025-05-10T12:50:40.804Z",
+    "type": "text",
+    "title": "AI Agent",
+    "position": "left"
+  }
+]
