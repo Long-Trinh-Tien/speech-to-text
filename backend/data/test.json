@@ -78,5 +78,101 @@
     "type": "text",
     "title": "AI Agent",
     "position": "left"
+  },
+  {
+    "user": "test",
+    "text": "hi",
+    "date": "2025-06-10T17:11:30.942Z",
+    "type": "text",
+    "title": "test",
+    "position": "right"
+  },
+  {
+    "user": "bot",
+    "text": "Hi there! How can I help you today?\n",
+    "date": "2025-06-10T17:11:31.725Z",
+    "type": "text",
+    "title": "AI Agent",
+    "position": "left"
+  },
+  {
+    "user": "test",
+    "text": "sing a song",
+    "date": "2025-06-10T17:16:57.870Z",
+    "type": "text",
+    "title": "test",
+    "position": "right"
+  },
+  {
+    "user": "bot",
+    "text": "Okay, I'll sing a little song! How about something cheerful?\n\n(Imagine a ukulele playing gently in the background)\n\n(Verse 1)\nSunrise paints the window pane,\nAnother day begins again.\nBirds are singing in the trees,\nCarried on a gentle breeze.\n\n(Chorus)\nSo wake up sleepy head, and smile,\nLet happiness last for a while.\nThe world is waiting, bright and new,\nJust waiting there for you!\n\n(Verse 2)\nCoffee brewing, smells so sweet,\nLittle tapping of my feet.\nGot a feeling in my heart,\nA brand new day, a fresh new start.\n\n(Chorus)\nSo wake up sleepy head, and smile,\nLet happiness last for a while.\nThe world is waiting, bright and new,\nJust waiting there for you!\n\n(Outro)\nLa la la la, a happy tune,\nBeneath the sun and silver moon.\nLa la la la, all is bright,\nHave a wonderful day and night!\n\n---\n\nHow was that? I can try a different style or mood if you'd like! Tell me:\n\n*   **What kind of song were you hoping for?** (e.g., happy, sad, funny, rock, folk, etc.)\n*   **Is there a particular topic you'd like the song to be about?** (e.g., love, friendship, nature, a specific animal, etc.)\n*   **Do you prefer a fast or slow tempo?**\n\nThe more information you give me, the better I can tailor the song to your taste! 😄\n",
+    "date": "2025-06-10T17:17:00.720Z",
+    "type": "text",
+    "title": "AI Agent",
+    "position": "left"
+  },
+  {
+    "user": "test",
+    "text": "hi, how are you",
+    "date": "2025-06-11T03:39:18.826Z",
+    "type": "text",
+    "title": "test",
+    "position": "right"
+  },
+  {
+    "user": "bot",
+    "text": "I am doing well, thank you for asking! As a large language model, I don't experience emotions or feelings in the same way humans do, but I am functioning as intended and ready to assist you. How can I help you today?\n",
+    "date": "2025-06-11T03:39:19.837Z",
+    "type": "text",
+    "title": "AI Agent",
+    "position": "left"
+  },
+  {
+    "user": "test",
+    "text": "hi, how are you",
+    "date": "2025-06-11T03:39:18.774Z",
+    "type": "text",
+    "title": "test",
+    "position": "right"
+  },
+  {
+    "user": "bot",
+    "text": "I am doing well, thank you for asking! As a large language model, I don't experience emotions or feelings in the same way humans do, but I am functioning as intended and ready to assist you. How can I help you today?\n",
+    "date": "2025-06-11T03:39:19.838Z",
+    "type": "text",
+    "title": "AI Agent",
+    "position": "left"
+  },
+  {
+    "user": "test",
+    "text": "hello",
+    "date": "2025-06-11T04:01:51.731Z",
+    "type": "text",
+    "title": "test",
+    "position": "right"
+  },
+  {
+    "user": "bot",
+    "text": "Hello! How can I help you today?\n",
+    "date": "2025-06-11T04:01:52.570Z",
+    "type": "text",
+    "title": "AI Agent",
+    "position": "left"
+  },
+  {
+    "user": "test",
+    "text": ":v",
+    "date": "2025-06-11T05:40:49.527Z",
+    "type": "text",
+    "title": "test",
+    "position": "right"
+  },
+  {
+    "user": "bot",
+    "text": "That's a fun emoticon! \":v\" typically represents a person with a slightly open mouth or a buck-toothed smile. It's often used to convey playfulness, silliness, or sometimes a slightly mischievous attitude.\n",
+    "date": "2025-06-11T05:40:50.605Z",
+    "type": "text",
+    "title": "AI Agent",
+    "position": "left"
   }
 ]

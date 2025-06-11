@@ -3,6 +3,8 @@ import "/src/App.css";
 import ChatBox from "./components/Chatbox.jsx";
 import LogIn from "./components/Login.jsx";
 import Register from "./components/Register.jsx";
+
+
 import {
   BrowserRouter as Router,
   Routes,
@@ -80,6 +82,7 @@ export default function App() {
                   </div>
                   <div className="Chatbox">
                     <ChatBox />
+
                   </div>
                 </div>
               ) : (

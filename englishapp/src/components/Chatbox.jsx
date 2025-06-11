@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef, useContext } from "react";
 import "react-chat-elements/dist/main.css";
 import "./css/Chatbox.css";
-import { UserContext } from "../function/UserContext"; 
+import { UserContext } from "../function/UserContext";
 import ChatMessage from "./ChatMessage";
 import ChatInput from "./ChatInput";
 import useSpeechToText from "../hooks/useSpeechToText";
@@ -34,19 +34,26 @@ export default function ChatBox() {
   }, [username]);
 
   return (
-	<div className="chat-container">
-	  <div className="message-list" ref={messageListRef}>
-		{messages.map((msg, idx) => <ChatMessage key={idx} msg={msg} />)}
-	  </div>
+    <div className="chat-container">
+      <div className="message-list" ref={messageListRef}>
+        {messages.map((msg, idx) => {
+          // Chặn tin nhắn lỗi không có text
+          if (!msg || typeof msg.text !== "string") {
+            console.warn("Invalid message skipped:", msg);
+            return null;
+          }
+          return <ChatMessage key={idx} msg={msg} />;
+        })}
+      </div>
 
-	  <ChatInput
-		inputValue={inputValue}
-		setInputValue={setInputValue}
-		onSend={handleSend}
-		isRecording={isRecording}
-		toggleVoice={toggle}
-		waitForAnswer={waitForAnswer}
-	  />
-	</div>
+      <ChatInput
+        inputValue={inputValue}
+        setInputValue={setInputValue}
+        onSend={handleSend}
+        isRecording={isRecording}
+        toggleVoice={toggle}
+        waitForAnswer={waitForAnswer}
+      />
+    </div>
   );
 }

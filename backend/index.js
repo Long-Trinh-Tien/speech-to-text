@@ -101,6 +101,19 @@ app.post("/user-token", async (req, res) => {
     res.status(500).json({ error });
   }
 });
+app.post("/translate", async (req, res) => {
+  const { text } = req.body;
+  if (!text) return res.status(400).json({ error: "Missing text to translate" });
+
+  try {
+    const prompt = `Dịch đoạn văn sau sang tiếng Việt:\n"${text}"`;
+    const response = await sendMessageToGemini(prompt);
+    res.json({ translated: response });
+  } catch (err) {
+    res.status(500).json({ error: "Translation failed" });
+  }
+});
+
 
 app.listen(port, () => {
   console.log(`Server listening on http://localhost:${port}`);
