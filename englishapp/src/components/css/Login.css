@@ -7,68 +7,95 @@
   background-color: #f0f0f0;
 }
 
+.login-container form {
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 420px;
+}
+
 .login-container h2 {
-  margin-bottom: 20px;
+  margin-bottom: 24px;
   color: #333;
-  font-size: 4rem;
+  font-size: 3rem;
   font-weight: bold;
   text-align: center;
 }
 
 .form-group {
-  margin-bottom: 15px;
+  margin-bottom: 18px;
   width: 100%;
 }
 
 .form-group label {
   display: block;
-  margin-bottom: 5px;
-  font-size: 2rem;
+  margin-bottom: 8px;
+  font-size: 1.4rem;
   color: #555;
 }
 
 .form-group input {
   width: 100%;
-  padding: 10px;
-  font-size: 1.5rem;
+  padding: 12px;
+  font-size: 1.2rem;
   border: 1px solid #ccc;
-  border-radius: 5px;
+  border-radius: 10px;
+  transition: border-color 0.3s ease;
+  box-sizing: border-box;
+}
+
+.form-group input:focus {
+  border-color: #11445f;
+  outline: none;
+}
+
+.remember {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 12px;
 }
 
 .error-message {
   color: red;
   font-size: 1rem;
-  margin-top: 5px;
+  margin: 8px 0;
+  text-align: center;
 }
 
 .button-container {
   display: flex;
-  justify-content: center;
-  margin-top: 20px;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 15px;
+  gap: 10px;
 }
 
 .button-container button {
-  padding: 10px 20px;
-  background-color: #ff7700;
+  padding: 12px 24px;
+  background-color: #63bae9;
   color: white;
   border: none;
-  border-radius: 5px;
+  border-radius: 8px;
   cursor: pointer;
-  font-size: 1rem;
-  margin-right: 1.5rem;
+  font-size: 1.1rem;
+  transition: background-color 0.3s;
+}
+
+.button-container button:hover {
+  background-color: #63bae9;
 }
 
 .button-container a {
-  margin-top: 0.5rem;
-  text-decoration: none;
-  color: #007bff;
   font-size: 1rem;
+  color: #007bff;
+  text-decoration: none;
 }
 
-.remember {
-  display: flex;
-  font-size: 1rem;
-  color: #555;
-  justify-content: left;
-  gap: 1rem;
+.button-container a:hover {
+  color: #0056b3;
 }

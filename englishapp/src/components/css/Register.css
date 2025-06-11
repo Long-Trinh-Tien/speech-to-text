@@ -1,90 +1,93 @@
-/* Tổng thể layout form */
-.login-container {
+.register-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
+.register-container form {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     width: 100%;
-    max-width: 400px;
-    margin: 50px auto;
-    background: #fff;
-    padding: 30px 40px;
-    border-radius: 12px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-    font-family: 'Segoe UI', sans-serif;
+    max-width: 420px;
 }
 
-/* Tiêu đề */
-.login-container h2 {
-    text-align: center;
-    margin-bottom: 25px;
-    font-size: 28px;
+.register-container h2 {
+    margin-bottom: 24px;
     color: #333;
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
 }
 
-/* Nhóm form */
-.form-group {
-    margin-bottom: 20px;
+.register-form-group {
+    margin-bottom: 18px;
+    width: 100%;
 }
 
-/* Label */
-.form-group label {
+.register-form-group label {
     display: block;
     margin-bottom: 8px;
-    font-weight: 500;
-    color: #444;
-    font-size: 20px;
+    font-size: 1.4rem;
+    color: #555;
 }
 
-/* Input */
-.form-group input {
+.register-form-group input {
     width: 100%;
-    padding: 10px 12px;
-    font-size: 18px;
+    padding: 12px;
+    font-size: 1.2rem;
     border: 1px solid #ccc;
-    border-radius: 8px;
+    border-radius: 10px;
     transition: border-color 0.3s ease;
+    box-sizing: border-box;
 }
 
-.form-group input:focus {
-    border-color: #007BFF;
+.register-form-group input:focus {
+    border-color: #11445f;
     outline: none;
 }
 
-/* Nút và link */
-.button-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 25px;
+.register-error-message {
+    color: red;
+    font-size: 1rem;
+    margin: 8px 0;
+    text-align: center;
 }
 
-.button-container button {
-    padding: 10px 20px;
-    background: #ffd500;
+.register-button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    text-align: center;
+    margin-top: 15px;
+}
+
+.register-button-container button {
+    padding: 12px 24px;
+    background-color: #63bae9;
     color: white;
     border: none;
     border-radius: 8px;
-    font-size: 16px;
     cursor: pointer;
-    transition: background 0.3s ease;
+    font-size: 1.1rem;
+    transition: background-color 0.3s;
 }
 
-.button-container button:hover {
-    background: #0056b3;
+.register-button-container button:hover {
+    background-color: #63bae9;
 }
 
-.button-container a {
-    color: #007BFF;
+.register-button-container a {
+    font-size: 1rem;
+    color: #007bff;
     text-decoration: none;
-    font-size: 14px;
 }
 
-.button-container a:hover {
-    text-decoration: underline;
-}
-
-/* Hiển thị lỗi */
-.error-message {
-    color: red;
-    font-size: 14px;
-    margin-top: -10px;
-    margin-bottom: 10px;
-    text-align: center;
+.register-button-container a:hover {
+    color: #0056b3;
 }

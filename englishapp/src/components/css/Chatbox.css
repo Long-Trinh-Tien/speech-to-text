@@ -8,6 +8,7 @@
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   border-radius: 26px;
   box-shadow: 0 4px 12px rgba(151, 43, 43, 0.05);
+  min-height: 0;
 }
 
 
@@ -32,7 +33,7 @@
 .message-list::-webkit-scrollbar {
   width: 8px;
   border-radius: 20px;
-  /* Cực kỳ quan trọng để bo cong phần thanh cuộn */
+
 }
 
 .message-list::-webkit-scrollbar-track {
@@ -44,7 +45,7 @@
   background-color: #bbb;
   border-radius: 20px;
   border: 2px solid transparent;
-  /* giúp bo góc rõ ràng */
+
   background-clip: content-box;
 }
 

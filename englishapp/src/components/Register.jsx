@@ -38,10 +38,10 @@ export default function Register() {
   };
 
   return (
-    <div className="login-container">
+    <div className="register-container">
       <h2>Register</h2>
       <form onSubmit={handleRegister}>
-        <div className="form-group">
+        <div className="register-form-group">
           <label htmlFor="username">Username:</label>
           <input
             type="text"
@@ -51,7 +51,8 @@ export default function Register() {
             onChange={(e) => setUsername(e.target.value)}
           />
         </div>
-        <div className="form-group">
+
+        <div className="register-form-group">
           <label htmlFor="password">Password:</label>
           <input
             type="password"
@@ -61,7 +62,8 @@ export default function Register() {
             onChange={(e) => setPassword(e.target.value)}
           />
         </div>
-        <div className="form-group">
+
+        <div className="register-form-group">
           <label htmlFor="confirm-password">Confirm Password:</label>
           <input
             type="password"
@@ -72,9 +74,9 @@ export default function Register() {
           />
         </div>
 
-        {error && <p className="error-message">{error}</p>}
+        {error && <p className="register-error-message">{error}</p>}
 
-        <div className="button-container">
+        <div className="register-button-container">
           <button type="submit">Register</button>
           <a href="/login">Already have an account?</a>
         </div>
