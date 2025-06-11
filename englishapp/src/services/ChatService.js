@@ -42,3 +42,24 @@ export async function fetchHistory(username) {
 
   return safeMessages;
 }
+
+export async function translateText(text) {
+  try {
+    const res = await fetch("http://localhost:3000/translate", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ text }),
+    });
+
+    const data = await res.json();
+
+
+    return (
+      data?.translated?.candidates?.[0]?.content?.parts?.[0]?.text ||
+      "Không thể dịch văn bản."
+    );
+  } catch (err) {
+    console.error("Error translate:", err);
+    return "Error.";
+  }
+}

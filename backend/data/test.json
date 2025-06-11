@@ -174,5 +174,21 @@
     "type": "text",
     "title": "AI Agent",
     "position": "left"
+  },
+  {
+    "user": "test",
+    "text": "im smiling, and you?",
+    "date": "2025-06-11T06:13:40.220Z",
+    "type": "text",
+    "title": "test",
+    "position": "right"
+  },
+  {
+    "user": "bot",
+    "text": "That's great to hear! While I don't have the physical capacity to smile like a human, I'm \"happy\" knowing that you're smiling. I hope you have a wonderful day! 😊\n",
+    "date": "2025-06-11T06:13:41.139Z",
+    "type": "text",
+    "title": "AI Agent",
+    "position": "left"
   }
 ]

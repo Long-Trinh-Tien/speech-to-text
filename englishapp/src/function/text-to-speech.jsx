@@ -19,13 +19,19 @@ export default function TextToSpeech(props) {
     highlightProps: { style: { color: "yellow", backgroundColor: "white" } },
   });
   return (
-    <>
+    <div className="tts-button-group">
       {speechStatus !== "started" ? (
-        <FaCirclePlay onClick={start} />
+        <button className="tts-icon" onClick={start} title="Play">
+          <FaCirclePlay />
+        </button>
       ) : (
-        <FaCirclePause onClick={pause} />
+        <button className="tts-icon" onClick={pause} title="Pause">
+          <FaCirclePause />
+        </button>
       )}
-      <FaCircleStop onClick={stop} />
-    </>
+      <button className="tts-icon" onClick={stop} title="Stop">
+        <FaCircleStop />
+      </button>
+    </div>
   );
 }

@@ -68,7 +68,7 @@ export default function App() {
               isLogin ? (
                 <div className="Main-container">
                   <div className="Header">
-                    <p>Welcome {username}</p>
+                    <p>Welcome "{username}"</p>
                     <a
                       href="/login"
                       onClick={() => {
