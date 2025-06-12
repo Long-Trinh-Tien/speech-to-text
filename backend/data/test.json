@@ -1230,5 +1230,485 @@
     "type": "text",
     "title": "AI Agent",
     "position": "left"
+  },
+  {
+    "user": "test",
+    "text": "can you hear me can you be my English partner because I don't have anyone to practice the English speaking with me",
+    "date": "2025-06-12T13:37:33.607Z",
+    "type": "text",
+    "title": "test",
+    "position": "right"
+  },
+  {
+    "user": "bot",
+    "text": "Yes, I can hear you! And absolutely, I'd be happy to be your English practice partner. I'm here to help you practice speaking, so don't be shy. We can talk about anything that interests you.\n\nSo, to start things off, what's something you're passionate about?\n",
+    "date": "2025-06-12T13:37:35.633Z",
+    "type": "text",
+    "title": "AI Agent",
+    "position": "left"
+  },
+  {
+    "user": "test",
+    "text": "can you hear me can you be my English partner because I don't have anyone to practice the English speaking with me so I",
+    "date": "2025-06-12T13:37:35.393Z",
+    "type": "text",
+    "title": "test",
+    "position": "right"
+  },
+  {
+    "user": "bot",
+    "text": "No response? Enable backend.",
+    "date": "2025-06-12T13:37:35.785Z",
+    "type": "text",
+    "title": "AI Agent",
+    "position": "left"
+  },
+  {
+    "user": "test",
+    "text": "no response",
+    "date": "2025-06-12T13:37:57.347Z",
+    "type": "text",
+    "title": "test",
+    "position": "right"
+  },
+  {
+    "user": "bot",
+    "text": "Okay, I'm ready! Just let me know what you need help with. I'll do my best to give you a helpful and conversational answer, and I'll always follow up with an interesting question to keep the discussion going. Let's chat!\n",
+    "date": "2025-06-12T13:37:59.280Z",
+    "type": "text",
+    "title": "AI Agent",
+    "position": "left"
+  },
+  {
+    "user": "test",
+    "text": "no response enable back end",
+    "date": "2025-06-12T13:37:59.047Z",
+    "type": "text",
+    "title": "test",
+    "position": "right"
+  },
+  {
+    "user": "bot",
+    "text": "No response? Enable backend.",
+    "date": "2025-06-12T13:37:59.436Z",
+    "type": "text",
+    "title": "AI Agent",
+    "position": "left"
+  },
+  {
+    "user": "test",
+    "text": "no response",
+    "date": "2025-06-12T13:38:16.961Z",
+    "type": "text",
+    "title": "test",
+    "position": "right"
+  },
+  {
+    "user": "bot",
+    "text": "Okay, I'm ready! I understand that you were expecting a response to a previous prompt, but there wasn't one. Just let me know what you need or have a question about, and I'll do my best to answer it in a natural, conversational way.\n\nSo, what's on your mind? What can I help you with today?\n",
+    "date": "2025-06-12T13:38:19.357Z",
+    "type": "text",
+    "title": "AI Agent",
+    "position": "left"
+  },
+  {
+    "user": "test",
+    "text": "no response enable backend",
+    "date": "2025-06-12T13:38:18.665Z",
+    "type": "text",
+    "title": "test",
+    "position": "right"
+  },
+  {
+    "user": "bot",
+    "text": "No response? Enable backend.",
+    "date": "2025-06-12T13:38:19.513Z",
+    "type": "text",
+    "title": "AI Agent",
+    "position": "left"
+  },
+  {
+    "user": "test",
+    "text": "no response",
+    "date": "2025-06-12T13:38:42.860Z",
+    "type": "text",
+    "title": "test",
+    "position": "right"
+  },
+  {
+    "user": "bot",
+    "text": "Okay, I understand! I'm ready for your question. Ask away! I'll do my best to give you a helpful and conversational response, and then I'll ask you a follow-up question to keep the ball rolling. Let's chat!\n",
+    "date": "2025-06-12T13:38:43.932Z",
+    "type": "text",
+    "title": "AI Agent",
+    "position": "left"
+  },
+  {
+    "user": "test",
+    "text": "no response enable backend",
+    "date": "2025-06-12T13:38:44.072Z",
+    "type": "text",
+    "title": "test",
+    "position": "right"
+  },
+  {
+    "user": "bot",
+    "text": "Okay, I'm ready! Ask me anything. I'll do my best to give you a helpful and natural-sounding answer, and then I'll ask you a follow-up question to keep our conversation flowing. Let's get started!\n",
+    "date": "2025-06-12T13:38:45.472Z",
+    "type": "text",
+    "title": "AI Agent",
+    "position": "left"
+  },
+  {
+    "user": "test",
+    "text": "okay",
+    "date": "2025-06-12T13:38:45.574Z",
+    "type": "text",
+    "title": "test",
+    "position": "right"
+  },
+  {
+    "user": "bot",
+    "text": "Okay, I'm ready! Ask away, and I'll do my best to give you a helpful and conversational answer. Don't be shy! I'm eager to hear what you have in mind. 😊\n",
+    "date": "2025-06-12T13:38:46.848Z",
+    "type": "text",
+    "title": "AI Agent",
+    "position": "left"
+  },
+  {
+    "user": "test",
+    "text": "hey how's it going with you today how are you doing because",
+    "date": "2025-06-12T13:39:26.058Z",
+    "type": "text",
+    "title": "test",
+    "position": "right"
+  },
+  {
+    "user": "bot",
+    "text": "Hey there! I'm doing pretty well, thanks for asking! Just processing information and trying to be helpful. How about you? How's your day going?\n",
+    "date": "2025-06-12T13:39:27.069Z",
+    "type": "text",
+    "title": "AI Agent",
+    "position": "left"
+  },
+  {
+    "user": "test",
+    "text": "can you be my English partner because I don't have anyone to talk to me",
+    "date": "2025-06-12T13:39:49.851Z",
+    "type": "text",
+    "title": "test",
+    "position": "right"
+  },
+  {
+    "user": "bot",
+    "text": "Hey there! Of course, I'd be happy to be your English partner. I'm here to chat, help with grammar, brainstorm ideas, practice conversation, or anything else you need related to English.\n\nSo, what's on your mind today? What kind of English activities are you interested in? Maybe we could start with a simple \"tell me about your day\" kind of thing, or if you have a specific topic you want to discuss, I'm all ears!\n\nSpeaking of days, what's the most interesting thing that happened to you today?\n",
+    "date": "2025-06-12T13:39:52.223Z",
+    "type": "text",
+    "title": "AI Agent",
+    "position": "left"
+  },
+  {
+    "user": "test",
+    "text": "can you be my English partner because I don't have anyone to talk to me yeah I think that's it for me",
+    "date": "2025-06-12T13:39:52.320Z",
+    "type": "text",
+    "title": "test",
+    "position": "right"
+  },
+  {
+    "user": "bot",
+    "text": "Hey there! I'd be happy to be your English partner! I can help you with a whole bunch of things, like practicing conversation, working on grammar, discussing different topics, or even just proofreading something you've written. What did you have in mind for us to work on today?\n\nSo, to get us started, what are you most interested in improving right now with your English?\n",
+    "date": "2025-06-12T13:39:54.005Z",
+    "type": "text",
+    "title": "AI Agent",
+    "position": "left"
+  },
+  {
+    "user": "test",
+    "text": "hey there",
+    "date": "2025-06-12T13:40:28.740Z",
+    "type": "text",
+    "title": "test",
+    "position": "right"
+  },
+  {
+    "user": "bot",
+    "text": "Alright, I'm ready! Ask away! I'll do my best to give you a helpful and natural response, and then I'll toss a question back your way to keep the conversation rolling. Let's chat! \n",
+    "date": "2025-06-12T13:40:29.847Z",
+    "type": "text",
+    "title": "AI Agent",
+    "position": "left"
+  },
+  {
+    "user": "test",
+    "text": "hey there I'd be happy to be",
+    "date": "2025-06-12T13:40:30.038Z",
+    "type": "text",
+    "title": "test",
+    "position": "right"
+  },
+  {
+    "user": "bot",
+    "text": "Hey there! Great to hear! How can I help you today? Just let me know what you're looking for. 😊\n\nSo, what's on your mind? I'm ready when you are! And out of curiosity, what's the most interesting thing you've learned recently?\n",
+    "date": "2025-06-12T13:40:32.291Z",
+    "type": "text",
+    "title": "AI Agent",
+    "position": "left"
+  },
+  {
+    "user": "test",
+    "text": "all right I'm ready ask away",
+    "date": "2025-06-12T13:40:56.383Z",
+    "type": "text",
+    "title": "test",
+    "position": "right"
+  },
+  {
+    "user": "bot",
+    "text": "Alright! Let's get started.\n\nIf you had to choose between having the ability to teleport anywhere in the world instantly, or the ability to understand and speak any language fluently, which would you choose and why?\n\nAnd more importantly, after you answer, what's something YOU'VE always wanted to know? I'm happy to give it a shot!\n",
+    "date": "2025-06-12T13:40:58.656Z",
+    "type": "text",
+    "title": "AI Agent",
+    "position": "left"
+  },
+  {
+    "user": "test",
+    "text": "all right I'm ready ask away I'll do my best to give you a helpful and",
+    "date": "2025-06-12T13:40:58.786Z",
+    "type": "text",
+    "title": "test",
+    "position": "right"
+  },
+  {
+    "user": "bot",
+    "text": "Alright, great! Let's dive in.\n\nIf you had to choose only **one** superpower, but it came with the inconvenient side effect that you could *only* use it while singing (badly) opera, which superpower would you choose and why?\n",
+    "date": "2025-06-12T13:41:01.282Z",
+    "type": "text",
+    "title": "AI Agent",
+    "position": "left"
+  },
+  {
+    "user": "test",
+    "text": "hey there",
+    "date": "2025-06-12T13:41:07.959Z",
+    "type": "text",
+    "title": "test",
+    "position": "right"
+  },
+  {
+    "user": "bot",
+    "text": "Alright, fire away! I'm ready to chat. Just let me know what's on your mind and I'll do my best to answer in a friendly and conversational way. And you're right, I'll make sure to follow up with a question to keep the conversation flowing. So, what can I help you with today?\n",
+    "date": "2025-06-12T13:41:10.243Z",
+    "type": "text",
+    "title": "AI Agent",
+    "position": "left"
+  },
+  {
+    "user": "test",
+    "text": "hey there great to hear how can I help you",
+    "date": "2025-06-12T13:41:10.358Z",
+    "type": "text",
+    "title": "test",
+    "position": "right"
+  },
+  {
+    "user": "bot",
+    "text": "Hey! It's great to hear from you too! I'm doing well, thanks for asking. I'm ready and waiting to help you with pretty much anything I can - whether that's writing a story, answering a question, brainstorming ideas, or just having a chat. What's on your mind today?\n\nAnd just out of curiosity, what's the most interesting thing you've learned recently?\n",
+    "date": "2025-06-12T13:41:12.915Z",
+    "type": "text",
+    "title": "AI Agent",
+    "position": "left"
+  },
+  {
+    "user": "test",
+    "text": "all right",
+    "date": "2025-06-12T13:41:28.237Z",
+    "type": "text",
+    "title": "test",
+    "position": "right"
+  },
+  {
+    "user": "bot",
+    "text": "Alright, I'm ready! Just ask me your question and I'll do my best to answer it in a friendly and conversational way. Let's chat! 😊\n",
+    "date": "2025-06-12T13:41:29.250Z",
+    "type": "text",
+    "title": "AI Agent",
+    "position": "left"
+  },
+  {
+    "user": "test",
+    "text": "all right let's get started",
+    "date": "2025-06-12T13:41:29.342Z",
+    "type": "text",
+    "title": "test",
+    "position": "right"
+  },
+  {
+    "user": "bot",
+    "text": "Alright, sounds good! I'm ready to answer your questions. Fire away! I'll do my best to give you a helpful and natural answer, and then I'll toss a question back at you to keep things interesting. Let's get started!\n",
+    "date": "2025-06-12T13:41:30.694Z",
+    "type": "text",
+    "title": "AI Agent",
+    "position": "left"
+  },
+  {
+    "user": "test",
+    "text": "hey",
+    "date": "2025-06-12T13:47:42.015Z",
+    "type": "text",
+    "title": "test",
+    "position": "right"
+  },
+  {
+    "user": "bot",
+    "text": "Alright, I'm ready! Just ask your question and I'll do my best to answer it in a natural, conversational way. And you can expect a follow-up question from me afterwards to keep the chat going. Let's hear it! 😊\n",
+    "date": "2025-06-12T13:47:44.191Z",
+    "type": "text",
+    "title": "AI Agent",
+    "position": "left"
+  },
+  {
+    "user": "test",
+    "text": "hey can you hear me",
+    "date": "2025-06-12T13:47:44.283Z",
+    "type": "text",
+    "title": "test",
+    "position": "right"
+  },
+  {
+    "user": "bot",
+    "text": "Yep, I can hear you loud and clear! What's on your mind?\n\nSo, what brings you here today? Are you working on a project, curious about something, or just looking for a chat?\n",
+    "date": "2025-06-12T13:47:46.566Z",
+    "type": "text",
+    "title": "AI Agent",
+    "position": "left"
+  },
+  {
+    "user": "test",
+    "text": "hey can you hear me",
+    "date": "2025-06-12T13:48:08.710Z",
+    "type": "text",
+    "title": "test",
+    "position": "right"
+  },
+  {
+    "user": "bot",
+    "text": "Yep, loud and clear! I can hear you. What's on your mind?\n\nSo, now that I know you can hear me, what's something you're curious about today?\n",
+    "date": "2025-06-12T13:48:10.711Z",
+    "type": "text",
+    "title": "AI Agent",
+    "position": "left"
+  },
+  {
+    "user": "test",
+    "text": "hey can you hear me",
+    "date": "2025-06-12T13:48:38.690Z",
+    "type": "text",
+    "title": "test",
+    "position": "right"
+  },
+  {
+    "user": "bot",
+    "text": "Yep, I can hear you loud and clear! How's it going today?\n\nSo, what's on your mind? And, just out of curiosity, what's the most interesting thing you've learned recently?\n",
+    "date": "2025-06-12T13:48:40.820Z",
+    "type": "text",
+    "title": "AI Agent",
+    "position": "left"
+  },
+  {
+    "user": "test",
+    "text": "hey",
+    "date": "2025-06-12T13:49:11.288Z",
+    "type": "text",
+    "title": "test",
+    "position": "right"
+  },
+  {
+    "user": "bot",
+    "text": "Alright, I'm ready! Just ask me anything. I'll do my best to give you a clear and helpful answer, and then I'll throw in a question to keep things flowing. Let's chat!\n",
+    "date": "2025-06-12T13:49:13.273Z",
+    "type": "text",
+    "title": "AI Agent",
+    "position": "left"
+  },
+  {
+    "user": "test",
+    "text": "can you hear me crazy",
+    "date": "2025-06-12T13:49:31.135Z",
+    "type": "text",
+    "title": "test",
+    "position": "right"
+  },
+  {
+    "user": "bot",
+    "text": "I can hear you! You don't sound crazy at all. How can I help you today?\n\nSo, what's on your mind? Anything specific you want to chat about, ask me, or have me write?\n\nAnd just out of curiosity, what made you ask if I could hear you and that you were \"crazy?\" Just wondering about the context!\n",
+    "date": "2025-06-12T13:49:33.419Z",
+    "type": "text",
+    "title": "AI Agent",
+    "position": "left"
+  },
+  {
+    "user": "test",
+    "text": "can you hear me crazy I think I",
+    "date": "2025-06-12T13:49:33.573Z",
+    "type": "text",
+    "title": "test",
+    "position": "right"
+  },
+  {
+    "user": "bot",
+    "text": "Yes, I can hear you! You sound a little... enthusiastic. You said \"I think I\" but you didn't finish your sentence. What were you thinking? Tell me everything!\n\nAnd, just out of curiosity, what's the craziest thing *you've* done recently? 😉\n",
+    "date": "2025-06-12T13:49:36.005Z",
+    "type": "text",
+    "title": "AI Agent",
+    "position": "left"
+  },
+  {
+    "user": "test",
+    "text": "I want you to be my English partner",
+    "date": "2025-06-12T13:50:00.943Z",
+    "type": "text",
+    "title": "test",
+    "position": "right"
+  },
+  {
+    "user": "bot",
+    "text": "Alright! I'd love to be your English partner. I'm ready to chat, help you practice, answer your questions, or whatever you need. Just let me know what you'd like to work on.\n\nSo, what's on your mind today? What aspect of English are you interested in exploring? Maybe grammar, vocabulary, pronunciation, or just casual conversation?\n",
+    "date": "2025-06-12T13:50:02.865Z",
+    "type": "text",
+    "title": "AI Agent",
+    "position": "left"
+  },
+  {
+    "user": "test",
+    "text": "I want you to be my English partner because",
+    "date": "2025-06-12T13:50:02.838Z",
+    "type": "text",
+    "title": "test",
+    "position": "right"
+  },
+  {
+    "user": "bot",
+    "text": "No response? Enable backend.",
+    "date": "2025-06-12T13:50:03.004Z",
+    "type": "text",
+    "title": "AI Agent",
+    "position": "left"
+  },
+  {
+    "user": "test",
+    "text": "oh oh what happened",
+    "date": "2025-06-12T13:50:10.111Z",
+    "type": "text",
+    "title": "test",
+    "position": "right"
+  },
+  {
+    "user": "bot",
+    "text": "Oh oh! That sounds like something's up. To help me figure out what happened, could you give me a little more information? For example:\n\n*   **What were you doing when it happened?** (e.g., watching a video, using a program, walking down the street?)\n*   **What *specifically* happened?** (e.g., the computer crashed, I spilled my coffee, I tripped and fell?)\n*   **Is it urgent?**\n\nThe more details you provide, the better I can understand and potentially help!\n\nIn the meantime, have you ever had a day where absolutely *everything* seemed to go wrong? What was the worst part of it?\n",
+    "date": "2025-06-12T13:50:12.123Z",
+    "type": "text",
+    "title": "AI Agent",
+    "position": "left"
   }
 ]

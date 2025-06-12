@@ -4,7 +4,18 @@ import { Button } from "react-chat-elements";
 import { sendMessage } from "../services/ChatService";
 import { UserContext } from "../function/UserContext";
 
-function speak(isOnConversation, text, callBackFunction) {
+function speak(
+  setisSpeaking,
+  isSpeakingRef,
+  isOnConversation,
+  text,
+  callBackFunction
+) {
+  // Dừng mọi phát âm đang diễn ra
+  if (window.speechSynthesis.speaking) {
+    window.speechSynthesis.cancel();
+  }
+  setisSpeaking(true);
   const utterance = new SpeechSynthesisUtterance(text);
   utterance.lang = "en-US";
   utterance.rate = 1;
@@ -12,7 +23,8 @@ function speak(isOnConversation, text, callBackFunction) {
   utterance.volume = 1;
 
   utterance.onend = () => {
-    if (isOnConversation) {
+    setisSpeaking(false);
+    if (isOnConversation && !isSpeakingRef.current) {
       callBackFunction();
     }
   };
@@ -21,8 +33,10 @@ function speak(isOnConversation, text, callBackFunction) {
 
 export default function AiConversation({ setInputValue, setMessages }) {
   const [isOnConversation, setIsOnConversation] = useState(false);
+  const [isSpeaking, setisSpeaking] = useState(false);
   const recognitionRef = useRef(null);
   const isOnConversationRef = useRef(isOnConversation);
+  const isSpeakingRef = useRef(isSpeaking);
   const { username } = useContext(UserContext); // Get username from context
 
   useEffect(() => {
@@ -47,7 +61,7 @@ export default function AiConversation({ setInputValue, setMessages }) {
         let tempTranscript = "";
         for (let i = event.resultIndex; i < event.results.length; i++) {
           const result = event.results[i];
-          if (result.isFinal) {
+          if (result.isFinal && !isSpeakingRef.current) {
             finalTranscript += result[0].transcript;
             setInputValue(finalTranscript);
             // Gửi tới Gemini và phát âm trả lời
@@ -60,9 +74,15 @@ export default function AiConversation({ setInputValue, setMessages }) {
               recognitionRef.current.stop();
             }
             setInputValue("");
-            speak(isOnConversationRef.current, botText.text, startListening);
+            speak(
+              setisSpeaking,
+              isSpeakingRef.current,
+              isOnConversationRef.current,
+              botText.text,
+              startListening
+            );
           } else {
-            tempTranscript = finalTranscript + result[0].transcript;
+            tempTranscript = tempTranscript + result[0].transcript;
             setInputValue(tempTranscript);
           }
         }
@@ -74,7 +94,6 @@ export default function AiConversation({ setInputValue, setMessages }) {
         finalTranscript = "";
       };
       recognitionRef.current.onend = (event) => {
-        //setIsOnConversation(false);
         finalTranscript = "";
       };
     }
