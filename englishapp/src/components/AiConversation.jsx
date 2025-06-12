@@ -4,13 +4,18 @@ import { Button } from "react-chat-elements";
 import { sendMessage } from "../services/ChatService";
 import { UserContext } from "../function/UserContext";
 
-function speak(text, callBackFunction) {
+function speak(isOnConversation, text, callBackFunction) {
   const utterance = new SpeechSynthesisUtterance(text);
   utterance.lang = "en-US";
   utterance.rate = 1;
   utterance.pitch = 1;
   utterance.volume = 1;
-  utterance.onend = callBackFunction;
+
+  utterance.onend = () => {
+    if (isOnConversation) {
+      callBackFunction();
+    }
+  };
   speechSynthesis.speak(utterance);
 }
 
@@ -33,7 +38,7 @@ export default function AiConversation({ setInputValue, setMessages }) {
 
     if (!recognitionRef.current) {
       recognitionRef.current = new SpeechRecognition();
-      recognitionRef.current.continuous = false;
+      recognitionRef.current.continuous = true;
       recognitionRef.current.interimResults = true;
       recognitionRef.current.lang = "en-US";
 
@@ -51,11 +56,11 @@ export default function AiConversation({ setInputValue, setMessages }) {
               finalTranscript
             );
             setMessages((prev) => [...prev, userMsg, botText]);
-            speak(botText.text, () => {
-              if (isOnConversationRef.current) {
-                startListening(); // tiếp tục lắng nghe sau khi nói xong
-              }
-            });
+            if (recognitionRef.current) {
+              recognitionRef.current.stop();
+            }
+            setInputValue("");
+            speak(isOnConversationRef.current, botText.text, startListening);
           } else {
             tempTranscript = finalTranscript + result[0].transcript;
             setInputValue(tempTranscript);
@@ -69,6 +74,7 @@ export default function AiConversation({ setInputValue, setMessages }) {
         finalTranscript = "";
       };
       recognitionRef.current.onend = (event) => {
+        //setIsOnConversation(false);
         finalTranscript = "";
       };
     }

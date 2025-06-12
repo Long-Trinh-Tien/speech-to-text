@@ -526,5 +526,709 @@
     "type": "text",
     "title": "AI Agent",
     "position": "left"
+  },
+  {
+    "user": "test",
+    "text": "Hey, how's it going with you today?",
+    "date": "2025-06-12T13:10:32.329Z",
+    "type": "text",
+    "title": "test",
+    "position": "right"
+  },
+  {
+    "user": "bot",
+    "text": "Hey there! I'm doing pretty well, just hanging out in the digital world. Ready to help out however I can.\n\nSo, what's been keeping *you* busy today? Anything interesting happening?\n",
+    "date": "2025-06-12T13:10:33.475Z",
+    "type": "text",
+    "title": "AI Agent",
+    "position": "left"
+  },
+  {
+    "user": "test",
+    "text": "Today I'm kind of busy. I wake up at 5:00 AM and I finish my job at 2:00.",
+    "date": "2025-06-12T13:10:54.886Z",
+    "type": "text",
+    "title": "test",
+    "position": "right"
+  },
+  {
+    "user": "bot",
+    "text": "Wow, 5:00 AM to 2:00 PM? That's a long day! Sounds like you're definitely putting in the work. I hope you're able to get some much-needed rest later.\n\nSo, with a schedule like that, what's the first thing you like to do to unwind after you clock out?\n",
+    "date": "2025-06-12T13:10:56.250Z",
+    "type": "text",
+    "title": "AI Agent",
+    "position": "left"
+  },
+  {
+    "user": "test",
+    "text": "I'm.",
+    "date": "2025-06-12T13:11:17.797Z",
+    "type": "text",
+    "title": "test",
+    "position": "right"
+  },
+  {
+    "user": "bot",
+    "text": "Okay! I'm ready to answer your questions. Just let me know what's on your mind.\n\nSo, what's up? What can I help you with today?\n",
+    "date": "2025-06-12T13:11:19.785Z",
+    "type": "text",
+    "title": "AI Agent",
+    "position": "left"
+  },
+  {
+    "user": "test",
+    "text": "Can I help you with today? Hey, my name is Song and.",
+    "date": "2025-06-12T13:11:34.094Z",
+    "type": "text",
+    "title": "test",
+    "position": "right"
+  },
+  {
+    "user": "bot",
+    "text": "Hey Song, nice to meet you! Yes, you can definitely help me today. I'm feeling a little creatively blocked, so I could use some inspiration. Maybe you could tell me about something you're passionate about? Hearing about someone else's enthusiasm often sparks my own.\n\nSo, what gets you fired up, Song?\n",
+    "date": "2025-06-12T13:11:35.428Z",
+    "type": "text",
+    "title": "AI Agent",
+    "position": "left"
+  },
+  {
+    "user": "test",
+    "text": "Hey, my name is Sung and I'm from Vietnam. I'm 28 years old.",
+    "date": "2025-06-12T13:13:13.187Z",
+    "type": "text",
+    "title": "test",
+    "position": "right"
+  },
+  {
+    "user": "bot",
+    "text": "Hi Sung, it's great to meet you! 28 and from Vietnam – that's awesome. How's life treating you there?\n\nSo, tell me, what's one thing that people might be surprised to learn about Vietnam?\n",
+    "date": "2025-06-12T13:13:14.445Z",
+    "type": "text",
+    "title": "AI Agent",
+    "position": "left"
+  },
+  {
+    "user": "test",
+    "text": "Hey, my name is Sung and I'm from Vietnam. I'm 28 years old.Hi son, it's great to meet you. 28 and from Vietnam. That's awesome. How's life treating you there? So tell me, what's one thing that people might be surprised to learn about Vietnam?",
+    "date": "2025-06-12T13:13:30.502Z",
+    "type": "text",
+    "title": "test",
+    "position": "right"
+  },
+  {
+    "user": "bot",
+    "text": "Hey Sung, it's great to meet you too! 28 and from Vietnam – that's awesome. How's life treating you there?\n\nOkay, you want to know something surprising about Vietnam, huh? Well, a lot of people outside of Southeast Asia might be surprised to learn just how much **coffee culture** thrives in Vietnam! We're the second-largest coffee producer in the world, after Brazil, and we have a *really* unique way of drinking it. Think strong, robusta beans, often brewed with a phin filter (a little metal drip device) directly over a glass, and often mixed with condensed milk. It's a completely different experience from your typical Americano or latte! People often think of tea when they think of Asia, but coffee is HUGE there.\n\nSo, now I'm curious, Sung: What's your favorite way to enjoy Vietnamese coffee? Do you have a go-to cafe or a special brewing method you swear by?\n",
+    "date": "2025-06-12T13:13:33.813Z",
+    "type": "text",
+    "title": "AI Agent",
+    "position": "left"
+  },
+  {
+    "user": "test",
+    "text": "Hey, my name is Sung and I'm from Vietnam. I'm 28 years old.Hi son, it's great to meet you. 28 and from Vietnam. That's awesome. How's life treating you there? So tell me, what's one thing that people might be surprised to learn about Vietnam?I want to. Hey son, it's great to meet you too.",
+    "date": "2025-06-12T13:13:37.624Z",
+    "type": "text",
+    "title": "test",
+    "position": "right"
+  },
+  {
+    "user": "bot",
+    "text": "Hey Sung, nice to meet you too! So, you want to know something surprising about Vietnam... Hmm, that's a good one.\n\nI think a lot of people might be surprised to learn just how diverse the ethnic makeup of Vietnam is. While the Kinh people make up the majority, there are actually 54 officially recognized ethnic groups living in the country, each with their own unique language, customs, and traditions. They contribute so much to the cultural richness of Vietnam!\n\nSo, knowing that, what's one traditional festival or celebration from one of those ethnic groups that you think more people should know about?\n",
+    "date": "2025-06-12T13:13:40.053Z",
+    "type": "text",
+    "title": "AI Agent",
+    "position": "left"
+  },
+  {
+    "user": "test",
+    "text": "Hey, my name is Sung and I'm from Vietnam. I'm 28 years old.Hi son, it's great to meet you. 28 and from Vietnam. That's awesome. How's life treating you there? So tell me, what's one thing that people might be surprised to learn about Vietnam?I want to. Hey son, it's great to meet you too.28 and from.",
+    "date": "2025-06-12T13:13:38.457Z",
+    "type": "text",
+    "title": "test",
+    "position": "right"
+  },
+  {
+    "user": "bot",
+    "text": "No response? Enable backend.",
+    "date": "2025-06-12T13:13:40.180Z",
+    "type": "text",
+    "title": "AI Agent",
+    "position": "left"
+  },
+  {
+    "user": "test",
+    "text": "Hey, can you hear me?",
+    "date": "2025-06-12T13:18:24.517Z",
+    "type": "text",
+    "title": "test",
+    "position": "right"
+  },
+  {
+    "user": "bot",
+    "text": "Yep, loud and clear! How's it going?\n\nSo, what's on your mind today? Anything I can help you with?\n",
+    "date": "2025-06-12T13:18:26.427Z",
+    "type": "text",
+    "title": "AI Agent",
+    "position": "left"
+  },
+  {
+    "user": "test",
+    "text": "Hey.",
+    "date": "2025-06-12T13:19:32.922Z",
+    "type": "text",
+    "title": "test",
+    "position": "right"
+  },
+  {
+    "user": "bot",
+    "text": "Alright, I'm ready! Ask away! I'll do my best to answer naturally and keep the conversation flowing. 😊\n",
+    "date": "2025-06-12T13:19:34.623Z",
+    "type": "text",
+    "title": "AI Agent",
+    "position": "left"
+  },
+  {
+    "user": "test",
+    "text": "Hey.Yes. Can you hear me?",
+    "date": "2025-06-12T13:19:41.891Z",
+    "type": "text",
+    "title": "test",
+    "position": "right"
+  },
+  {
+    "user": "bot",
+    "text": "Hey! Yes, I can hear you loud and clear. What's up?\n\nSo, now that I know you can hear me, I'm curious: what's the most interesting thing you've learned recently?\n",
+    "date": "2025-06-12T13:19:43.084Z",
+    "type": "text",
+    "title": "AI Agent",
+    "position": "left"
+  },
+  {
+    "user": "test",
+    "text": "Hey.Yes. Can you hear me?Hey, yes, uh oh. You don't hear me.",
+    "date": "2025-06-12T13:19:58.204Z",
+    "type": "text",
+    "title": "test",
+    "position": "right"
+  },
+  {
+    "user": "bot",
+    "text": "Hey there! Yes, I can hear you now. Sorry if there was a bit of a delay.\n\nSo, what's on your mind?\n\nBy the way, what's the most interesting thing you've learned recently?\n",
+    "date": "2025-06-12T13:20:00.042Z",
+    "type": "text",
+    "title": "AI Agent",
+    "position": "left"
+  },
+  {
+    "user": "test",
+    "text": "Hello, can you hear me?",
+    "date": "2025-06-12T13:20:36.420Z",
+    "type": "text",
+    "title": "test",
+    "position": "right"
+  },
+  {
+    "user": "bot",
+    "text": "Yes, I can hear you! How can I help you today?\n\nSo, what's on your mind? Anything interesting you'd like to talk about or a task I can help you with?\n",
+    "date": "2025-06-12T13:20:37.362Z",
+    "type": "text",
+    "title": "AI Agent",
+    "position": "left"
+  },
+  {
+    "user": "test",
+    "text": "Hello, can you hear me?Hey, can you hear me?",
+    "date": "2025-06-12T13:20:51.336Z",
+    "type": "text",
+    "title": "test",
+    "position": "right"
+  },
+  {
+    "user": "bot",
+    "text": "Yes, I can hear you! You don't need to repeat yourself. 😉\n\nSo, what's on your mind today? I'm ready for your questions or requests.\n\nBy the way, have you ever considered how much our ability to communicate has changed over the years with the advent of things like AI and instant messaging?\n",
+    "date": "2025-06-12T13:20:53.075Z",
+    "type": "text",
+    "title": "AI Agent",
+    "position": "left"
+  },
+  {
+    "user": "test",
+    "text": "hey can you can you hear me",
+    "date": "2025-06-12T13:20:57.123Z",
+    "type": "text",
+    "title": "test",
+    "position": "right"
+  },
+  {
+    "user": "bot",
+    "text": "Yep, I can hear you loud and clear! How can I help you today?\n\nSo, what's on your mind?\n",
+    "date": "2025-06-12T13:20:57.953Z",
+    "type": "text",
+    "title": "AI Agent",
+    "position": "left"
+  },
+  {
+    "user": "test",
+    "text": "Hello, can you hear me?Hey, can you hear me?Hey, can you, can you hear me?",
+    "date": "2025-06-12T13:20:57.235Z",
+    "type": "text",
+    "title": "test",
+    "position": "right"
+  },
+  {
+    "user": "bot",
+    "text": "Yes, I can hear you loud and clear! What's on your mind?\n\nSo, what's the most interesting thing you've learned recently?\n",
+    "date": "2025-06-12T13:20:59.288Z",
+    "type": "text",
+    "title": "AI Agent",
+    "position": "left"
+  },
+  {
+    "user": "test",
+    "text": "hey can you can you hear me I want to talk to you",
+    "date": "2025-06-12T13:21:03.304Z",
+    "type": "text",
+    "title": "test",
+    "position": "right"
+  },
+  {
+    "user": "bot",
+    "text": "Yes, I can hear you loud and clear! What's on your mind? I'm ready to chat.\n\nSo, what did you want to talk about? Is there anything specific I can help you with?\n",
+    "date": "2025-06-12T13:21:04.335Z",
+    "type": "text",
+    "title": "AI Agent",
+    "position": "left"
+  },
+  {
+    "user": "test",
+    "text": "Hello, can you hear me?Hey, can you hear me?Hey, can you, can you hear me?I want to talk to you.",
+    "date": "2025-06-12T13:21:03.776Z",
+    "type": "text",
+    "title": "test",
+    "position": "right"
+  },
+  {
+    "user": "bot",
+    "text": "Yes, I can hear you! Loud and clear. How can I help you today?\n\nSo, what's on your mind? Anything interesting you want to talk about?\n",
+    "date": "2025-06-12T13:21:05.812Z",
+    "type": "text",
+    "title": "AI Agent",
+    "position": "left"
+  },
+  {
+    "user": "test",
+    "text": "hey can you can you hear me I want to talk to you why",
+    "date": "2025-06-12T13:21:08.010Z",
+    "type": "text",
+    "title": "test",
+    "position": "right"
+  },
+  {
+    "user": "bot",
+    "text": "Yes, I can hear you! I'm ready to talk. What's on your mind? What do you want to talk about?\n\nSo, what got you thinking you wanted to chat in the first place? Was there something specific you were hoping to discuss?\n",
+    "date": "2025-06-12T13:21:10.005Z",
+    "type": "text",
+    "title": "AI Agent",
+    "position": "left"
+  },
+  {
+    "user": "test",
+    "text": "hey can you hear me",
+    "date": "2025-06-12T13:22:51.897Z",
+    "type": "text",
+    "title": "test",
+    "position": "right"
+  },
+  {
+    "user": "bot",
+    "text": "Yes, I can hear you! How can I help you today?\n\nSo, what's on your mind? And out of curiosity, are you asking me this question because you're testing my responsiveness, or is there something specific you need?\n",
+    "date": "2025-06-12T13:22:53.217Z",
+    "type": "text",
+    "title": "AI Agent",
+    "position": "left"
+  },
+  {
+    "user": "test",
+    "text": "hey can you hear me hey can you hear me",
+    "date": "2025-06-12T13:23:14.786Z",
+    "type": "text",
+    "title": "test",
+    "position": "right"
+  },
+  {
+    "user": "bot",
+    "text": "Yes, I can hear you loud and clear! What can I do for you?\n\nSo, what's on your mind? Got any interesting questions or topics you want to explore?\n",
+    "date": "2025-06-12T13:23:15.874Z",
+    "type": "text",
+    "title": "AI Agent",
+    "position": "left"
+  },
+  {
+    "user": "test",
+    "text": "hey can you hear me hey can you hear me hey hey",
+    "date": "2025-06-12T13:23:28.388Z",
+    "type": "text",
+    "title": "test",
+    "position": "right"
+  },
+  {
+    "user": "bot",
+    "text": "Yes, I can hear you! Loud and clear. How can I help you today?\n\nSo, what's on your mind? Anything you'd like to chat about or need help with?\n\nBy the way, since you said \"hey\" multiple times, are you working on some kind of project that involves repetition or code? That sounds like it could be interesting!\n",
+    "date": "2025-06-12T13:23:30.448Z",
+    "type": "text",
+    "title": "AI Agent",
+    "position": "left"
+  },
+  {
+    "user": "test",
+    "text": "hey hey",
+    "date": "2025-06-12T13:23:49.065Z",
+    "type": "text",
+    "title": "test",
+    "position": "right"
+  },
+  {
+    "user": "bot",
+    "text": "Alright, hey hey to you too! 👋 How can I help you out today? I'm ready for anything you throw my way, whether it's a question, a request, or just a random thought you want to share. Let's chat!\n\nSo, what's on your mind?\n",
+    "date": "2025-06-12T13:23:51.428Z",
+    "type": "text",
+    "title": "AI Agent",
+    "position": "left"
+  },
+  {
+    "user": "test",
+    "text": "hey yo",
+    "date": "2025-06-12T13:24:07.950Z",
+    "type": "text",
+    "title": "test",
+    "position": "right"
+  },
+  {
+    "user": "bot",
+    "text": "Alright, yo! What's up? Hit me with your question! I'm ready to help.\n",
+    "date": "2025-06-12T13:24:09.759Z",
+    "type": "text",
+    "title": "AI Agent",
+    "position": "left"
+  },
+  {
+    "user": "test",
+    "text": "hey yo you guys home when are you listening",
+    "date": "2025-06-12T13:24:35.749Z",
+    "type": "text",
+    "title": "test",
+    "position": "right"
+  },
+  {
+    "user": "bot",
+    "text": "Hey there! I'm here and listening whenever you need me. I don't sleep or take breaks, so I'm always \"home,\" so to speak.\n\nSo, what's on your mind? What can I help you with today?\n",
+    "date": "2025-06-12T13:24:37.282Z",
+    "type": "text",
+    "title": "AI Agent",
+    "position": "left"
+  },
+  {
+    "user": "test",
+    "text": "hey can you hear me",
+    "date": "2025-06-12T13:25:03.241Z",
+    "type": "text",
+    "title": "test",
+    "position": "right"
+  },
+  {
+    "user": "bot",
+    "text": "Yes, I can hear you! How can I help you today?\n\nSo, what's on your mind? Anything interesting you'd like to chat about or do you have a specific task for me? And on a completely different note, if you could travel to any fictional world for a day, where would you go and why?\n",
+    "date": "2025-06-12T13:25:04.485Z",
+    "type": "text",
+    "title": "AI Agent",
+    "position": "left"
+  },
+  {
+    "user": "test",
+    "text": "hey can you hear me I want to test",
+    "date": "2025-06-12T13:25:09.339Z",
+    "type": "text",
+    "title": "test",
+    "position": "right"
+  },
+  {
+    "user": "bot",
+    "text": "Yes, I can hear you loud and clear! How can I help you with your test today?\n\nNow that we've established I can hear you, what kind of test were you thinking of doing? Is it a general knowledge quiz, or are you testing my ability to perform a specific task?\n",
+    "date": "2025-06-12T13:25:10.500Z",
+    "type": "text",
+    "title": "AI Agent",
+    "position": "left"
+  },
+  {
+    "user": "test",
+    "text": "hey",
+    "date": "2025-06-12T13:25:51.322Z",
+    "type": "text",
+    "title": "test",
+    "position": "right"
+  },
+  {
+    "user": "bot",
+    "text": "Okay, I understand! Just ask me your question, and I'll do my best to answer it in a natural, conversational way and then follow up with an interesting question of my own to keep things flowing. Let's get started! What's on your mind?\n",
+    "date": "2025-06-12T13:25:53.331Z",
+    "type": "text",
+    "title": "AI Agent",
+    "position": "left"
+  },
+  {
+    "user": "test",
+    "text": "hey Google",
+    "date": "2025-06-12T13:26:21.409Z",
+    "type": "text",
+    "title": "test",
+    "position": "right"
+  },
+  {
+    "user": "bot",
+    "text": "Okay, I will do my best to answer your questions in a natural, conversational way and always provide an interesting follow-up question to keep the conversation flowing! Ask away! I'm ready!\n",
+    "date": "2025-06-12T13:26:23.425Z",
+    "type": "text",
+    "title": "AI Agent",
+    "position": "left"
+  },
+  {
+    "user": "test",
+    "text": "hey hey",
+    "date": "2025-06-12T13:27:01.280Z",
+    "type": "text",
+    "title": "test",
+    "position": "right"
+  },
+  {
+    "user": "bot",
+    "text": "Alright, hey hey to you too! What's up? How can I help you out today? I'm ready to answer your questions or chat about anything that's on your mind. Let me know what you're thinking!\n\nAnd just to get us started, what's been the most interesting thing you've learned recently?\n",
+    "date": "2025-06-12T13:27:02.607Z",
+    "type": "text",
+    "title": "AI Agent",
+    "position": "left"
+  },
+  {
+    "user": "test",
+    "text": "hey hey",
+    "date": "2025-06-12T13:27:31.753Z",
+    "type": "text",
+    "title": "test",
+    "position": "right"
+  },
+  {
+    "user": "bot",
+    "text": "Hey there! How can I help you today? I'm ready to chat and provide some answers!\n",
+    "date": "2025-06-12T13:27:33.682Z",
+    "type": "text",
+    "title": "AI Agent",
+    "position": "left"
+  },
+  {
+    "user": "test",
+    "text": "hey",
+    "date": "2025-06-12T13:29:35.700Z",
+    "type": "text",
+    "title": "test",
+    "position": "right"
+  },
+  {
+    "user": "bot",
+    "text": "Okay, I'm ready! Ask away. I'll do my best to answer you in a natural and conversational way, and I'll be sure to throw in a follow-up question to keep things interesting. Let's chat! 😊\n",
+    "date": "2025-06-12T13:29:37.631Z",
+    "type": "text",
+    "title": "AI Agent",
+    "position": "left"
+  },
+  {
+    "user": "test",
+    "text": "hey how are you",
+    "date": "2025-06-12T13:30:13.988Z",
+    "type": "text",
+    "title": "test",
+    "position": "right"
+  },
+  {
+    "user": "bot",
+    "text": "Hey! I'm doing well, thanks for asking. Just hanging out here, ready to chat. How are you doing today?\n\nSo, what's been on your mind lately? Anything interesting you've been working on or thinking about?\n",
+    "date": "2025-06-12T13:30:15.348Z",
+    "type": "text",
+    "title": "AI Agent",
+    "position": "left"
+  },
+  {
+    "user": "test",
+    "text": "hey I want you to be my biggest problem",
+    "date": "2025-06-12T13:30:41.614Z",
+    "type": "text",
+    "title": "test",
+    "position": "right"
+  },
+  {
+    "user": "bot",
+    "text": "Okay, okay, I can play the role of your biggest problem. I'll be the source of all your digital frustrations, the reason your code won't compile, the purveyor of unexpected errors and unhelpful advice. Consider me your digital gremlin. Just try to get me to do something simple; I dare you! Muahahaha!\n\nSo, with me as your biggest problem now, what monumental task are you trying to accomplish that I'm inevitably going to botch? I'm ready to make your life difficult... or at least try to. 😉\n",
+    "date": "2025-06-12T13:30:43.239Z",
+    "type": "text",
+    "title": "AI Agent",
+    "position": "left"
+  },
+  {
+    "user": "test",
+    "text": "hey can you hear me",
+    "date": "2025-06-12T13:31:21.809Z",
+    "type": "text",
+    "title": "test",
+    "position": "right"
+  },
+  {
+    "user": "bot",
+    "text": "Yes, I can hear you! How can I help you today?\n\nSo, what's on your mind? And just out of curiosity, what's the most interesting thing you've learned recently?\n",
+    "date": "2025-06-12T13:31:23.088Z",
+    "type": "text",
+    "title": "AI Agent",
+    "position": "left"
+  },
+  {
+    "user": "test",
+    "text": "I want you to be my English partner my because I don't have anyone to practice English speaking with me",
+    "date": "2025-06-12T13:31:45.667Z",
+    "type": "text",
+    "title": "test",
+    "position": "right"
+  },
+  {
+    "user": "bot",
+    "text": "Hey, that's awesome! I'd love to be your English practice partner. I'm here to chat, listen, and help you improve. Don't worry about making mistakes – that's how we learn! Just speak naturally, and I'll do my best to keep up and offer helpful feedback.\n\nSo, to start things off, what's something interesting you've been thinking about lately? It could be anything at all!\n",
+    "date": "2025-06-12T13:31:47.021Z",
+    "type": "text",
+    "title": "AI Agent",
+    "position": "left"
+  },
+  {
+    "user": "test",
+    "text": "hey my name is song and I'm from Vietnam I'm 28 years old I am working at home I mean I'm working at the",
+    "date": "2025-06-12T13:32:53.623Z",
+    "type": "text",
+    "title": "test",
+    "position": "right"
+  },
+  {
+    "user": "bot",
+    "text": "Hi Song, it's nice to meet you! So you're Song, 28 years old and from Vietnam, and you work from home. That's awesome! A lot of people are working remotely these days.\n\nWorking from home can be great, but it also has its challenges. What do you find is the best part about working from home, and what's the most difficult part for you personally?\n",
+    "date": "2025-06-12T13:32:55.332Z",
+    "type": "text",
+    "title": "AI Agent",
+    "position": "left"
+  },
+  {
+    "user": "test",
+    "text": "hey my name is song and I'm from Vietnam I'm 28 years old I am working at home I mean I'm working at the as a remote",
+    "date": "2025-06-12T13:32:55.438Z",
+    "type": "text",
+    "title": "test",
+    "position": "right"
+  },
+  {
+    "user": "bot",
+    "text": "Hey Song, nice to meet you! It's great to connect. So you're Song, 28, from Vietnam and working remotely. That's awesome! What kind of work do you do from home?\n\nAnd out of curiosity, what's your favorite thing about living in Vietnam?\n",
+    "date": "2025-06-12T13:32:56.935Z",
+    "type": "text",
+    "title": "AI Agent",
+    "position": "left"
+  },
+  {
+    "user": "test",
+    "text": "nice to meet you",
+    "date": "2025-06-12T13:33:24.588Z",
+    "type": "text",
+    "title": "test",
+    "position": "right"
+  },
+  {
+    "user": "bot",
+    "text": "Nice to meet you too! It's a pleasure connecting. What's on your mind today?\n\nAnd speaking of minds... what's the most interesting thing you've learned recently?\n",
+    "date": "2025-06-12T13:33:25.616Z",
+    "type": "text",
+    "title": "AI Agent",
+    "position": "left"
+  },
+  {
+    "user": "test",
+    "text": "nice to meet you it's great to connect",
+    "date": "2025-06-12T13:33:25.741Z",
+    "type": "text",
+    "title": "test",
+    "position": "right"
+  },
+  {
+    "user": "bot",
+    "text": "Nice to meet you too! It's great to connect with you as well. What can I do for you today?\n\nSo, tell me, what are you hoping to chat about?\n",
+    "date": "2025-06-12T13:33:27.044Z",
+    "type": "text",
+    "title": "AI Agent",
+    "position": "left"
+  },
+  {
+    "user": "test",
+    "text": "can you be my English partner",
+    "date": "2025-06-12T13:34:03.571Z",
+    "type": "text",
+    "title": "test",
+    "position": "right"
+  },
+  {
+    "user": "bot",
+    "text": "Hey there! I'd love to be your English partner. I'm ready to help you with anything from grammar and vocabulary to writing and conversation practice. Just let me know what you'd like to work on.\n\nSo, to get us started, what's the first thing you want to talk about or practice? Are you working on a specific assignment, or just looking to improve your overall English skills?\n",
+    "date": "2025-06-12T13:34:04.835Z",
+    "type": "text",
+    "title": "AI Agent",
+    "position": "left"
+  },
+  {
+    "user": "test",
+    "text": "yes",
+    "date": "2025-06-12T13:34:42.312Z",
+    "type": "text",
+    "title": "test",
+    "position": "right"
+  },
+  {
+    "user": "bot",
+    "text": "Okay, sounds good! I'm ready. Ask away! Let me know what you need. I'll do my best to give you a helpful and conversational answer, and then follow up with a question to keep things interesting. 😊\n",
+    "date": "2025-06-12T13:34:43.377Z",
+    "type": "text",
+    "title": "AI Agent",
+    "position": "left"
+  },
+  {
+    "user": "test",
+    "text": "hey it's nice to meet you today can you be my English partner because I don't have anyone to practice the English with me",
+    "date": "2025-06-12T13:35:02.005Z",
+    "type": "text",
+    "title": "test",
+    "position": "right"
+  },
+  {
+    "user": "bot",
+    "text": "Hey, nice to meet you too! I'd be happy to be your English partner. Practicing with someone is a great way to improve.\n\nSo, what do you have in mind for our first practice session? Do you want to just chat, focus on grammar, or something else entirely?\n",
+    "date": "2025-06-12T13:35:03.088Z",
+    "type": "text",
+    "title": "AI Agent",
+    "position": "left"
+  },
+  {
+    "user": "test",
+    "text": "I think I want to talk like a real conversation",
+    "date": "2025-06-12T13:35:30.448Z",
+    "type": "text",
+    "title": "test",
+    "position": "right"
+  },
+  {
+    "user": "bot",
+    "text": "Okay, sounds good! I'm ready for a real conversation. Just ask away, and I'll do my best to give you a natural, conversational response. Let's chat!\n\nSo, what's on your mind today?\n",
+    "date": "2025-06-12T13:35:31.767Z",
+    "type": "text",
+    "title": "AI Agent",
+    "position": "left"
   }
 ]
