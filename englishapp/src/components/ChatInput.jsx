@@ -1,14 +1,15 @@
 import React from "react";
 import { Button } from "react-chat-elements";
 import VoiceButton from "./VoiceButton";
-
+import AiConversation from "../components/AiConversation";
 export default function ChatInput({
   inputValue,
   setInputValue,
   onSend,
   isRecording,
   toggleVoice,
-  waitForAnswer
+  waitForAnswer,
+  setMessages,
 }) {
   return (
     <div className="input-container">
@@ -24,8 +25,14 @@ export default function ChatInput({
         }}
       />
       <div className="button-container">
-        {!isRecording && !waitForAnswer && <Button text="Send" onClick={onSend} />}
+        {!isRecording && !waitForAnswer && (
+          <Button text="Send" onClick={onSend} />
+        )}
         <VoiceButton isRecording={isRecording} toggle={toggleVoice} />
+        <AiConversation
+          setInputValue={setInputValue}
+          setMessages={setMessages}
+        />
       </div>
     </div>
   );

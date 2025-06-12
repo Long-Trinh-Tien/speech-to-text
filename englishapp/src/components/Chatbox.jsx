@@ -25,7 +25,10 @@ export default function ChatBox() {
   }
 
   useEffect(() => {
-    messageListRef.current?.scrollTo({ top: messageListRef.current.scrollHeight, behavior: "smooth" });
+    messageListRef.current?.scrollTo({
+      top: messageListRef.current.scrollHeight,
+      behavior: "smooth",
+    });
   }, [messages]);
 
   useEffect(() => {
@@ -53,6 +56,7 @@ export default function ChatBox() {
         isRecording={isRecording}
         toggleVoice={toggle}
         waitForAnswer={waitForAnswer}
+        setMessages={setMessages}
       />
     </div>
   );

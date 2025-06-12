@@ -2,8 +2,13 @@ import { sendMessageToBackend } from "../function/sendMessageToBackend";
 
 export async function sendMessage(username, text) {
   const userMessage = createMessage(username, text, "right");
-  const res = await sendMessageToBackend(text);
-  const botText = res?.candidates?.[0]?.content?.parts?.[0]?.text || "No response? Enable backend.";
+  const res = await sendMessageToBackend(
+    (text +=
+      "Please answer the user in a natural, conversational way. After giving your answer, always ask an interesting follow-up question to keep the conversation going")
+  );
+  const botText =
+    res?.candidates?.[0]?.content?.parts?.[0]?.text ||
+    "No response? Enable backend.";
   const botMessage = createMessage("bot", botText, "left");
 
   await saveMessages(username, [userMessage, botMessage]);
@@ -18,10 +23,9 @@ export function createMessage(user, text, position) {
     date: new Date(),
     type: "text",
     title: user === "bot" ? "AI Agent" : user,
-    position
+    position,
   };
 }
-
 
 export async function saveMessages(username, messages) {
   await fetch("http://localhost:3000/save-message", {
@@ -52,7 +56,6 @@ export async function translateText(text) {
     });
 
     const data = await res.json();
-
 
     return (
       data?.translated?.candidates?.[0]?.content?.parts?.[0]?.text ||
