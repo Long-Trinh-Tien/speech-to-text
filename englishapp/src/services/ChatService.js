@@ -57,12 +57,15 @@ export async function translateText(text) {
 
     const data = await res.json();
 
-    return (
-      data?.translated?.candidates?.[0]?.content?.parts?.[0]?.text ||
-      "Không thể dịch văn bản."
-    );
+    return {
+      text: data?.translated?.text || "Không thể dịch văn bản.",
+      ipa: data?.ipa || "",
+    };
   } catch (err) {
     console.error("Error translate:", err);
-    return "Error.";
+    return {
+      text: "Error.",
+      ipa: "",
+    };
   }
 }

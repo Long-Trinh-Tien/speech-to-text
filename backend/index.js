@@ -48,7 +48,7 @@ app.post("/register", (req, res) => {
 // API save message
 app.post("/save-message", (req, res) => {
   const { username, messages } = req.body;
-  console.log("Received messages:", messages);
+
   if (!username || !messages) {
     return res.status(400).json({ error: "Missing username or messages" });
   }
@@ -101,17 +101,40 @@ app.post("/user-token", async (req, res) => {
     res.status(500).json({ error });
   }
 });
+
+// API translate text
 app.post("/translate", async (req, res) => {
   const { text } = req.body;
   if (!text) return res.status(400).json({ error: "Missing text to translate" });
 
   try {
-    const prompt = `Dịch đoạn văn sau sang tiếng Việt:\n"${text}"`;
+    const prompt = `
+Dịch đoạn văn sau sang tiếng Việt và cung cấp phiên âm IPA tiếng Anh.
+
+Đoạn văn: "${text}"
+
+Trả về theo định dạng:
+Dịch: <bản dịch>
+IPA: <phiên âm IPA>
+`;
+
     const response = await sendMessageToGemini(prompt);
-    res.json({ translated: response });
+
+    const rawText = response?.candidates?.[0]?.content?.parts?.[0]?.text || "";
+
+    const match = rawText.match(/Dịch:\s*(.*?)\s*IPA:\s*(.*)/is);
+    const translatedText = match?.[1]?.trim() || "Không thể dịch văn bản.";
+    const ipa = match?.[2]?.trim() || "";
+
+    res.json({
+      translated: { text: translatedText },
+      ipa: ipa,
+    });
   } catch (err) {
+    console.error("Translation error:", err);
     res.status(500).json({ error: "Translation failed" });
   }
+
 });
 
 

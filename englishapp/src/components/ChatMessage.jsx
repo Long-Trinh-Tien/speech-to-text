@@ -4,8 +4,9 @@ import TextToSpeech from "../function/text-to-speech";
 import { translateText } from "../services/ChatService";
 
 
+
 export default function ChatMessage({ msg }) {
-  const [translated, setTranslated] = useState("");
+  const [translated, setTranslated] = useState({ text: "", ipa: "" });
   const isUser = msg.user !== "bot";
 
   const handleMouseUp = async () => {
@@ -15,7 +16,12 @@ export default function ChatMessage({ msg }) {
     if (!selectedText || !originalText.includes(selectedText)) return;
 
     const result = await translateText(selectedText);
-    setTranslated(result.replace(/\n/g, ""));
+
+
+    setTranslated({
+      text: result.text?.replace(/\n/g, "") || "Can not translate.",
+      ipa: result.ipa?.replace(/\n/g, "") || "",
+    });
   };
 
   const displayText =
@@ -30,9 +36,14 @@ export default function ChatMessage({ msg }) {
         <TextToSpeech inputText={displayText} />
       </div>
 
-      {translated && (
+      {(translated.text || translated.ipa) && (
         <div className="chat-translation">
-          <strong>Bản dịch:</strong> {translated}
+          {translated.text && (
+            <div><strong>Bản dịch:</strong> {translated.text}</div>
+          )}
+          {translated.ipa && (
+            <div className="chat-ipa"><em>IPA:</em> {translated.ipa}</div>
+          )}
         </div>
       )}
     </div>
