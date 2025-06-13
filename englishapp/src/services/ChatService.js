@@ -69,3 +69,31 @@ export async function translateText(text) {
     };
   }
 }
+
+
+
+
+export async function saveVocabulary(username, word, meaning, ipa) {
+  try {
+    const res = await fetch("http://localhost:3000/save-vocab", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        username,
+        word,
+        meaning,
+        ipa,
+      }),
+    });
+
+    if (!res.ok) {
+      throw new Error("Failed to save vocabulary");
+    }
+
+    return await res.json();
+  } catch (err) {
+    console.error("Error saving vocabulary:", err);
+    return { success: false, error: err.message };
+  }
+}
+
