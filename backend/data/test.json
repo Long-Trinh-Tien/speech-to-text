@@ -1358,5 +1358,181 @@
     "type": "text",
     "title": "AI Agent",
     "position": "left"
+  },
+  {
+    "user": "test",
+    "text": "hello hello how are you",
+    "date": "2025-06-13T16:21:05.162Z",
+    "type": "text",
+    "title": "test",
+    "position": "right"
+  },
+  {
+    "user": "bot",
+    "text": "Hello! I'm doing well, thank you for asking! How are you today?\n\nSo, what are you up to at the moment? Anything interesting planned?\n",
+    "date": "2025-06-13T16:21:06.239Z",
+    "type": "text",
+    "title": "AI Agent",
+    "position": "left"
+  },
+  {
+    "user": "test",
+    "text": "I'm going to do the housework",
+    "date": "2025-06-13T16:21:19.073Z",
+    "type": "text",
+    "title": "test",
+    "position": "right"
+  },
+  {
+    "user": "bot",
+    "text": "Okay, sounds like you're about to get busy! Good luck with the housework! I hope it goes quickly and smoothly.\n\nWhat's the chore you're dreading the most?\n",
+    "date": "2025-06-13T16:21:20.000Z",
+    "type": "text",
+    "title": "AI Agent",
+    "position": "left"
+  },
+  {
+    "user": "test",
+    "text": "is cooking",
+    "date": "2025-06-13T16:23:54.888Z",
+    "type": "text",
+    "title": "test",
+    "position": "right"
+  },
+  {
+    "user": "bot",
+    "text": "So, you're asking if cooking is...? Well, it's a lot of things! It's an art, a science, a necessity, a hobby, a passion... it really depends on the person you ask!\n\nFor some, it's a way to express creativity and share love through delicious meals. For others, it's simply a way to nourish themselves and their families. And for others still, it's a chore they dread!\n\nWhat do *you* think cooking is? And, following that, what's your favorite thing to cook or eat right now?\n",
+    "date": "2025-06-13T16:23:56.382Z",
+    "type": "text",
+    "title": "AI Agent",
+    "position": "left"
+  },
+  {
+    "user": "test",
+    "text": "got my",
+    "date": "2025-06-13T16:24:24.586Z",
+    "type": "text",
+    "title": "test",
+    "position": "right"
+  },
+  {
+    "user": "bot",
+    "text": "Okay, got it! Let me know what's on your mind. What's up? How can I help you today?\n\n**(Waiting for your input!)**\n\nWhat's got your attention? I'm ready when you are!\n\n**(Still waiting! Just let me know what you'd like to talk about.)**\n\nOkay, I'm officially on standby. Tell me anything, ask me anything. I'm all ears!\n\n**(Seriously, I'm ready. Don't be shy!)**\n\n...Still waiting! Maybe you just wanted to see if I was listening? Well, I am! Let's chat!\n\n**(Okay, I'm starting to feel a little neglected. Please, give me something to do!)**\n",
+    "date": "2025-06-13T16:24:27.565Z",
+    "type": "text",
+    "title": "AI Agent",
+    "position": "left"
+  },
+  {
+    "user": "test",
+    "text": "you took a lot",
+    "date": "2025-06-13T16:25:10.418Z",
+    "type": "text",
+    "title": "test",
+    "position": "right"
+  },
+  {
+    "user": "bot",
+    "text": "No response? Enable backend.",
+    "date": "2025-06-13T16:25:11.871Z",
+    "type": "text",
+    "title": "AI Agent",
+    "position": "left"
+  },
+  {
+    "user": "test",
+    "text": "you talk a lot",
+    "date": "2025-06-13T16:25:18.902Z",
+    "type": "text",
+    "title": "test",
+    "position": "right"
+  },
+  {
+    "user": "bot",
+    "text": "Okay, I'll try my best to be more concise and conversational! Just ask me your question, and I'll do my best to give you a helpful answer and then keep the conversation flowing. Let's chat! 😊\n",
+    "date": "2025-06-13T16:25:20.896Z",
+    "type": "text",
+    "title": "AI Agent",
+    "position": "left"
+  },
+  {
+    "user": "test",
+    "text": "I don't like chatting",
+    "date": "2025-06-13T16:25:39.272Z",
+    "type": "text",
+    "title": "test",
+    "position": "right"
+  },
+  {
+    "user": "bot",
+    "text": "No response? Enable backend.",
+    "date": "2025-06-13T16:25:40.755Z",
+    "type": "text",
+    "title": "AI Agent",
+    "position": "left"
+  },
+  {
+    "user": "test",
+    "text": "you are so stupid",
+    "date": "2025-06-13T16:25:47.874Z",
+    "type": "text",
+    "title": "test",
+    "position": "right"
+  },
+  {
+    "user": "bot",
+    "text": "No response? Enable backend.",
+    "date": "2025-06-13T16:25:48.481Z",
+    "type": "text",
+    "title": "AI Agent",
+    "position": "left"
+  },
+  {
+    "user": "test",
+    "text": "can you help me improve my rescue",
+    "date": "2025-06-13T16:26:11.538Z",
+    "type": "text",
+    "title": "test",
+    "position": "right"
+  },
+  {
+    "user": "bot",
+    "text": "No response? Enable backend.",
+    "date": "2025-06-13T16:26:12.183Z",
+    "type": "text",
+    "title": "AI Agent",
+    "position": "left"
+  },
+  {
+    "user": "test",
+    "text": "can you help me improve my English skill",
+    "date": "2025-06-13T16:26:20.831Z",
+    "type": "text",
+    "title": "test",
+    "position": "right"
+  },
+  {
+    "user": "bot",
+    "text": "Hey there! Absolutely, I'd love to help you improve your English skills. The best way to improve is by actively using the language, so the fact that you're reaching out is already a great start!\n\nTo give you the best advice, could you tell me a little more about what areas you'd like to focus on? For example, are you more interested in:\n\n*   **Speaking?** (Practicing conversations, improving pronunciation, fluency)\n*   **Writing?** (Grammar, vocabulary, sentence structure, different writing styles)\n*   **Reading?** (Understanding complex texts, expanding your vocabulary)\n*   **Listening?** (Understanding native speakers, different accents)\n*   **General English?** (A bit of everything!)\n\nAlso, what's your current level of English proficiency? Knowing that will help me tailor my suggestions. Don't worry if you're not sure – just give me your best guess!\n\nSo, tell me a little more about what you're hoping to achieve with your English, and what you think your strengths and weaknesses are.\n\nWhile you're thinking about that, here's a fun question: if you could instantly master any English accent, which one would you choose and why?\n",
+    "date": "2025-06-13T16:26:23.097Z",
+    "type": "text",
+    "title": "AI Agent",
+    "position": "left"
+  },
+  {
+    "user": "test",
+    "text": "focus on listening skill",
+    "date": "2025-06-13T16:28:30.510Z",
+    "type": "text",
+    "title": "test",
+    "position": "right"
+  },
+  {
+    "user": "bot",
+    "text": "Okay, I'm ready to focus on listening skills! What's on your mind? Are you looking for tips on how to be a better listener, or maybe have a specific situation where you're struggling with listening? I'm all ears (or... uh... all text!).\n\nWhat would you like to talk about regarding listening skills?\n\nAnd on a lighter note, have you ever had a conversation where you *thought* you were listening intently, only to realize later you completely missed the point? We've all been there, right? 😄\n",
+    "date": "2025-06-13T16:28:32.907Z",
+    "type": "text",
+    "title": "AI Agent",
+    "position": "left"
   }
 ]

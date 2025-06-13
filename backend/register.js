@@ -29,7 +29,7 @@ export function userRegister(username, password) {
       users.push(newUser);
 
       // Ghi lại vào file
-      const updatedData = JSON.stringify({ users }, null, 2); // format JSON đẹp
+      const updatedData = JSON.stringify({ users }, null, 2);
 
       fs.writeFile(filePath, updatedData, "utf8", (err) => {
         if (err) {

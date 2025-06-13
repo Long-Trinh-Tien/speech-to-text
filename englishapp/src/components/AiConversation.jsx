@@ -85,10 +85,13 @@ export default function AiConversation({ setInputValue, setMessages }) {
   const handleClick = () => {
     if (!isOnConversation) {
       setIsOnConversation(true);
+      isOnConversationRef.current = true;
       startListening();
     } else {
       setIsOnConversation(false);
+      isOnConversationRef.current = false;
       recognitionRef.current?.stop();
+      speechSynthesis.cancel();
     }
   };
 
