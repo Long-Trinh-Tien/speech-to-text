@@ -1710,5 +1710,21 @@
     "type": "text",
     "title": "AI Agent",
     "position": "left"
+  },
+  {
+    "user": "test",
+    "text": "Hey Mommy, how's going? The weather is so good today.",
+    "date": "2025-06-14T02:22:07.859Z",
+    "type": "text",
+    "title": "test",
+    "position": "right"
+  },
+  {
+    "user": "bot",
+    "text": "Hey honey, it's going well! You're right, the weather is absolutely gorgeous today. I'm thinking of maybe taking a walk later. What about you, are you enjoying the sunshine?\n\nSo, tell me, if you could teleport anywhere in the world right now, where would you go and what would you do there?\n",
+    "date": "2025-06-14T02:22:09.976Z",
+    "type": "text",
+    "title": "AI Agent",
+    "position": "left"
   }
 ]

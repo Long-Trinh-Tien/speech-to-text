@@ -105,7 +105,8 @@ app.post("/user-token", async (req, res) => {
 // API translate text
 app.post("/translate", async (req, res) => {
   const { text } = req.body;
-  if (!text) return res.status(400).json({ error: "Missing text to translate" });
+  if (!text)
+    return res.status(400).json({ error: "Missing text to translate" });
 
   try {
     const prompt = `
@@ -134,9 +135,7 @@ IPA: <phiên âm IPA>
     console.error("Translation error:", err);
     res.status(500).json({ error: "Translation failed" });
   }
-
 });
-
 
 // API save vocabulary
 app.post("/save-vocab", (req, res) => {
@@ -224,7 +223,6 @@ app.post("/delete-vocab", (req, res) => {
     res.status(500).json({ error: "Failed to delete vocab" });
   }
 });
-
 
 app.listen(port, () => {
   console.log(`Server listening on http://localhost:${port}`);

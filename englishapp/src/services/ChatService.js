@@ -70,9 +70,6 @@ export async function translateText(text) {
   }
 }
 
-
-
-
 export async function saveVocabulary(username, word, meaning, ipa) {
   try {
     const res = await fetch("http://localhost:3000/save-vocab", {
@@ -96,4 +93,3 @@ export async function saveVocabulary(username, word, meaning, ipa) {
     return { success: false, error: err.message };
   }
 }
-
