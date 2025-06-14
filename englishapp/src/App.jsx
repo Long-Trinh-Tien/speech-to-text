@@ -3,6 +3,7 @@ import "/src/App.css";
 import ChatBox from "./components/Chatbox.jsx";
 import LogIn from "./components/Login.jsx";
 import Register from "./components/Register.jsx";
+import SavedVocabList from "./components/SavedVocabList.jsx";
 
 
 import {
@@ -80,10 +81,15 @@ export default function App() {
                       Log out
                     </a>
                   </div>
-                  <div className="Chatbox">
-                    <ChatBox />
-
+                  <div className="Main-body">
+                    <div className="Sidebar">
+                      <SavedVocabList />
+                    </div>
+                    <div className="Chatbox">
+                      <ChatBox />
+                    </div>
                   </div>
+
                 </div>
               ) : (
                 <Navigate to="/login" />
