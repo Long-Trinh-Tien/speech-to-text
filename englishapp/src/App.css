@@ -8,12 +8,10 @@ body {
   display: flex;
   flex-direction: column;
   height: 100vh;
-  overflow: hidden;
 
 }
 
 .Header {
-  flex-shrink: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -24,24 +22,14 @@ body {
 
 .Header p {
   margin: 0;
-  font-size: 1.1rem;
   font-weight: 600;
-  color: #1a3c57;
+  color: #000000;
 }
 
 .Header a {
-  font-size: 1rem;
-  font-weight: 600;
   text-decoration: none;
-  background-color: #f44336;
-  color: white;
-  padding: 6px 12px;
-  border-radius: 6px;
-  transition: background-color 0.3s ease;
-}
-
-.Header a:hover {
-  background-color: #d32f2f;
+  color: hsl(240, 89%, 48%);
+  font-weight: 500;
 }
 
 .Chatbox {
@@ -51,62 +39,7 @@ body {
   padding: 16px;
   overflow: hidden;
   background: #f4f7fa;
+  border-top: 1px solid #e0e0e0;
+  height: 100%;
   box-sizing: border-box;
-}
-
-.Main-body {
-  display: flex;
-  flex: 1;
-  overflow: hidden;
-}
-
-.Sidebar {
-  width: 250px;
-  padding: 16px;
-  background-color: #e8f0fe;
-  border-right: 1px solid #ccc;
-  overflow-y: auto;
-}
-
-.saved-vocab-list {
-  font-size: 0.9rem;
-  padding: 12px;
-}
-
-.saved-vocab-list h3 {
-  font-size: 1.1rem;
-  font-weight: 700;
-  margin-bottom: 14px;
-  color: #2c3e50;
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
-}
-
-
-
-.saved-vocab-list ul {
-  list-style: none;
-  padding-left: 0;
-  margin: 0;
-}
-
-.saved-vocab-item {
-  margin-bottom: 12px;
-  padding: 8px;
-  border-radius: 10px;
-  background: #ffffff;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-}
-
-.saved-vocab-item div {
-  margin-bottom: 6px;
-}
-
-.saved-vocab-item button {
-  font-size: 0.8rem;
-  background: #ff4d4f;
-  color: #fff;
-  border: none;
-  border-radius: 8px;
-  padding: 4px 10px;
-  cursor: pointer;
 }

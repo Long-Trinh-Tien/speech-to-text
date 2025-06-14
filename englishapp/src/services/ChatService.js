@@ -57,43 +57,12 @@ export async function translateText(text) {
 
     const data = await res.json();
 
-    return {
-      text: data?.translated?.text || "Không thể dịch văn bản.",
-      ipa: data?.ipa || "",
-    };
+    return (
+      data?.translated?.candidates?.[0]?.content?.parts?.[0]?.text ||
+      "Không thể dịch văn bản."
+    );
   } catch (err) {
     console.error("Error translate:", err);
-    return {
-      text: "Error.",
-      ipa: "",
-    };
+    return "Error.";
   }
 }
-
-
-
-
-export async function saveVocabulary(username, word, meaning, ipa) {
-  try {
-    const res = await fetch("http://localhost:3000/save-vocab", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        username,
-        word,
-        meaning,
-        ipa,
-      }),
-    });
-
-    if (!res.ok) {
-      throw new Error("Failed to save vocabulary");
-    }
-
-    return await res.json();
-  } catch (err) {
-    console.error("Error saving vocabulary:", err);
-    return { success: false, error: err.message };
-  }
-}
-
