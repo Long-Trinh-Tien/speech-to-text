@@ -50,7 +50,7 @@ npm install .
 - Sử dụng `useRef` + `scrollTo` trong `Chatbox.jsx`
 - UX mượt như nhung, không cần kéo tay.
 
-### 🧼 Clean code chuẩn dev
+### 🧼 Clean code
 - Dùng `async/await`, xử lý lỗi rõ ràng.
 - Tránh callback hell, tránh setState loạn.
 - Kiểm tra input, tránh gửi tin nhắn rỗng.
@@ -72,57 +72,89 @@ npm install .
   - `ChatMessage`: hiển thị 1 message
   - `ChatInput`: xử lý input và nút voice
 
-![UML Diagram](./UML.png)
-UML Raw, xem detailed tại www.planttext.com
-@startuml
+## Backend Sequence Diagram
+```mermaid
+sequenceDiagram
+    participant Client
+    participant Backend as Backend (index.js)
+    participant Login as login.js
+    participant Register as register.js
+    participant Gemini as gemini.js
+    participant Files as Data Files (JSON)
+    participant GeminiAPI as Gemini API
 
-actor User
-entity "React App (index.js)" as ReactApp
-entity "UserProvider (Context)" as Context
-entity "App.jsx (Router)" as AppRouter
-entity "Login.jsx" as Login
-entity "Register.jsx" as Register
-entity "ChatBox.jsx" as ChatBox
-entity "ChatService.jsx" as ChatService
-entity "Express Backend" as Backend
-entity "Gemini API" as AI
-database "Filesystem (data/*.json)" as FS
+    %% Đăng ký
+    Client->>Backend: POST /register (username, password)
+    Backend->>Register: userRegister(username, password)
+    Register->>Files: Read user.json
+    Files-->>Register: User data
+    Register->>Files: Write new user to user.json
+    Register-->>Backend: Success (201)
+    Backend-->>Client: { status: 201, message, user }
 
-User -> ReactApp : Open Application
-ReactApp -> Context : Init UserContext
-ReactApp -> AppRouter : Render <App />
+    %% Đăng nhập
+    Client->>Backend: POST /login (username, password)
+    Backend->>Login: userCheck(username, password)
+    Login->>Files: Read user.json
+    Files-->>Login: User data
+    Login-->>Backend: Success (200) or Error (401)
+    Backend-->>Client: { status, message, user }
 
-User -> AppRouter : Navigate /login
-AppRouter -> Login : Render Login
-User -> Login : Submit credentials
-Login -> Backend : POST /login
-Backend --> Login : Response (status)
-Login -> AppRouter : setLoginStatus(true)
+    %% Kiểm tra token
+    Client->>Backend: POST /user-token (token)
+    Backend->>Login: tokenCheck(token)
+    Login->>Files: Read user.json
+    Files-->>Login: User data
+    Login-->>Backend: Success (200) or Error (401)
+    Backend-->>Client: { status, message, user }
 
-User -> AppRouter : Navigate /main
-AppRouter -> ChatBox : Render ChatBox
-ChatBox -> ChatService : fetchHistory(username)
-ChatService -> Backend : GET /get-history/:username
-Backend -> FS : Read username.json
-FS --> Backend : Message history
-Backend --> ChatService : Return messages
-ChatService --> ChatBox : Init message state
+    %% Gửi tin nhắn đến Gemini
+    Client->>Backend: POST /api/message (message)
+    Backend->>Gemini: sendMessageToGemini(message)
+    Gemini->>GeminiAPI: POST Gemini API
+    GeminiAPI-->>Gemini: Response
+    Gemini-->>Backend: Gemini response
+    Backend-->>Client: Gemini response or Error (500)
 
-User -> ChatBox : Input + click send
-ChatBox -> ChatService : sendMessage(username, inputValue)
-ChatService -> Backend : POST /api/message
-Backend -> AI : sendMessageToGemini()
-AI --> Backend : AI reply
-Backend --> ChatService : Response (AI reply)
-ChatService -> ChatService : createMessage(user/bot)
-ChatService -> Backend : POST /save-message
-Backend -> FS : Append to username.json
-FS --> Backend : OK
-Backend --> ChatService : { success: true }
-ChatService --> ChatBox : Return [userMsg, botMsg]
-ChatBox -> ChatBox : setMessages(), scrollToBottom()
+    %% Lưu tin nhắn
+    Client->>Backend: POST /save-message (username, messages)
+    Backend->>Files: Read <username>.json (if exists)
+    Files-->>Backend: Existing messages
+    Backend->>Files: Write combined messages to <username>.json
+    Backend-->>Client: { success: true } or Error (400/500)
 
-User -> ChatBox : See updated UI
+    %% Lấy lịch sử tin nhắn
+    Client->>Backend: GET /get-history/:username
+    Backend->>Files: Read <username>.json
+    Files-->>Backend: Messages
+    Backend-->>Client: { messages } or Error (404)
 
-@enduml
+    %% Dịch văn bản
+    Client->>Backend: POST /translate (text)
+    Backend->>Gemini: sendMessageToGemini(prompt)
+    Gemini->>GeminiAPI: POST Gemini API
+    GeminiAPI-->>Gemini: Translation + IPA
+    Gemini-->>Backend: Parsed response
+    Backend-->>Client: { translated, ipa } or Error (500)
+
+    %% Lưu từ vựng
+    Client->>Backend: POST /save-vocab (username, word, meaning, ipa)
+    Backend->>Files: Read <username>_vocab.json (if exists)
+    Files-->>Backend: Existing vocab
+    Backend->>Files: Write new vocab to <username>_vocab.json
+    Backend-->>Client: { success: true } or Error (400/500)
+
+    %% Lấy từ vựng
+    Client->>Backend: GET /get-vocab?username
+    Backend->>Files: Read <username>_vocab.json
+    Files-->>Backend: Vocab list
+    Backend-->>Client: Vocab list or []
+
+    %% Xóa từ vựng
+    Client->>Backend: POST /delete-vocab (username, word)
+    Backend->>Files: Read <username>_vocab.json
+    Files-->>Backend: Vocab list
+    Backend->>Files: Write updated vocab to <username>_vocab.json
+    Backend-->>Client: { success: true } or Error (400/500)
+```
 
